@@ -111,7 +111,7 @@ async function main() {
       }
     }
     
-    for (const url of externalUrls) {
+    for (const _url of externalUrls) {
       imageStats.skipped++;
     }
     
