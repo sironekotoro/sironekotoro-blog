@@ -1,0 +1,14 @@
+{
+  "title": "はじめてのPerl 第６版 第１０章 様々な制御構造",
+  "basename": "2015/04/04/161517",
+  "status": "Publish",
+  "publishedAt": "2015-04-04T07:15:17.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/04/04/161517",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/04/04/161517",
+  "html": "<h1>10.4 裸のブロック制御構造</h1>\n\n<pre class=\"code lang-perl\" data-lang=\"perl\" data-unlink>   {\n        <span class=\"synStatement\">my</span> <span class=\"synIdentifier\">$num</span> = <span class=\"synConstant\">1</span>;\n        <span class=\"synStatement\">say</span> <span class=\"synIdentifier\">$num</span>;  \n    }\n</pre>\n\n\n<ul>\n<li>前にforeachとかwhileをつけない、ブロックだけでいいとか全く思いもよらなかった。</li>\n<li>一時的なレキシカル変数のスコープを提供するっていうけど、使い道が思いつかない・・・</li>\n</ul>\n\n\n<h1>10.7 for制御構造</h1>\n\n<ul>\n<li>forのループって、カウントダウンはできないものとばっかり「思い込んで」いた</li>\n<li>普段、foreachしか使ってないからかなぁ</li>\n</ul>\n\n\n<pre class=\"code lang-perl\" data-lang=\"perl\" data-unlink>   <span class=\"synStatement\">for</span> (<span class=\"synStatement\">my</span> <span class=\"synIdentifier\">$i</span> = <span class=\"synConstant\">10</span>; <span class=\"synIdentifier\">$i</span> &gt;= <span class=\"synConstant\">1</span>; <span class=\"synIdentifier\">$i</span>--) {  \n        <span class=\"synStatement\">print</span> <span class=\"synConstant\">\"I can count down to </span><span class=\"synIdentifier\">$i</span><span class=\"synSpecial\">\\n</span><span class=\"synConstant\">\"</span>;  \n    }\n</pre>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

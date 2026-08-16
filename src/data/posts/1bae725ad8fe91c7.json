@@ -1,0 +1,12 @@
+{
+  "title": "はじめてのPerl 第６版 第９章 正規表現によるテキスト処理",
+  "basename": "2015/03/21/164746",
+  "status": "Publish",
+  "publishedAt": "2015-03-21T07:47:46.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/03/21/164746",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/03/21/164746",
+  "html": "<h1><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%C0%B5%B5%AC%C9%BD%B8%BD\" rel=\"noopener noreferrer\">正規表現</a>とは関係ないけど</h1>\n\n<ul>\n<li>ダイヤモンド<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%B1%E9%BB%BB%BB%D2\" rel=\"noopener noreferrer\">演算子</a> <code>&lt;&gt;</code> と、特殊変数 <code>$^I</code>の振る舞いがすごすぎてもう</li>\n</ul>\n\n\n<blockquote><p>しかし、もし $^Iに文字列がセットされていたら、 その文字列をバックアップファイル名の<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%B3%C8%C4%A5%BB%D2\" rel=\"noopener noreferrer\">拡張子</a>として使うようになります。その動作を説明しま しょう。</p>\n\n<p>ダイヤモンド<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%B1%E9%BB%BB%BB%D2\" rel=\"noopener noreferrer\">演算子</a>が、ファイルfred03.dat をオープンする処理について考えてみましょう。 ダイヤモンド<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%B1%E9%BB%BB%BB%D2\" rel=\"noopener noreferrer\">演算子</a>は従来通りにそのファイルをオープンしますが、こんどはさらにそのファイ ルをfred03.dat.bak という名前にリネームします。オープンされたファイルはリネーム前と変わ りませんが、今やそのファイルはディスク上では別の名前になっています。次に、ダイヤモンド <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%B1%E9%BB%BB%BB%D2\" rel=\"noopener noreferrer\">演算子</a>は新しいファイルを作成して、それにfred03.dat という名前を与えます。これはまったく 問題ありません─ なぜなら、先ほどリネームしたのでfred03.datというファイルは存在しない からです。そして、ダイヤモンド<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%B1%E9%BB%BB%BB%D2\" rel=\"noopener noreferrer\">演算子</a>は、この新しいファイルをデフォルトの出力先としてセ レクトするので、あなたが printしたものはすべてそのファイルに書き込まれます\n(205p)</p></blockquote>\n\n<ul>\n<li>いちいちバックアップ用の何かを書き足さなくても良いのか。すげーな\n\n<ul>\n<li>でも、明示的にバックアップをとってる感じがしなくて・・・ううむ。</li>\n</ul>\n</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": []
+}

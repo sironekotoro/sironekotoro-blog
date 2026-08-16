@@ -1,0 +1,14 @@
+{
+  "title": "serverman VPSで自作スクリプトをcronで動かす",
+  "basename": "2013/12/14/135734",
+  "status": "Publish",
+  "publishedAt": "2013-12-14T04:57:34.000Z",
+  "categories": [],
+  "oldPath": "/entry/2013/12/14/135734",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2013/12/14/135734",
+  "html": "<h3>動かなかった</h3>\n\n<ul>\n<li>まずは基本に立ち戻る</li>\n<li><code>*/10 * * * * ping -c1 localhost &gt;&gt; /home/pingtext.txt'</code></li>\n<li>ちゃんとファイルが出来てる</li>\n</ul>\n\n\n<h3>うごかないー</h3>\n\n<ul>\n<li><code>*/10 * * * * perl /home/script/makerss.pl</code></li>\n<li>このスクリプト、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/sqlite\" rel=\"noopener noreferrer\">sqlite</a>のDBに、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/RSS\" rel=\"noopener noreferrer\">RSS</a>発行に必要な情報が保存される仕組み。何だが、ダメ。</li>\n<li>手動で<code>perl /home/script/makerss.pl</code>とやると動く</li>\n</ul>\n\n\n<h3><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%B0%A5%B0%A4%EB\" rel=\"noopener noreferrer\">ググる</a>様に神託を求める</h3>\n\n<ul>\n<li>その中で、cronはPATHを理解しないってのを見つける</li>\n<li><a href=\"http://goryugo.com/20080423/perl%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%A7cron%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E6%B3%A8%E6%84%8F%E7%82%B9/\" rel=\"noopener noreferrer\">Perlプログラムでcronを実行する際の注意点 | ごりゅご.com</a>\n\n<ul>\n<li>PATH・・・？あ、あれかも</li>\n</ul>\n</li>\n</ul>\n\n\n<h3>動いた！</h3>\n\n<ul>\n<li>cronで<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/perl\" rel=\"noopener noreferrer\">perl</a>を起動させるときの<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/perl\" rel=\"noopener noreferrer\">perl</a>がOS標準の<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/perl\" rel=\"noopener noreferrer\">perl</a>ではないか？と推測</li>\n<li>検証\n\n<ul>\n<li><code>*/10 * * * * /home/perl -v &gt;&gt; /home/perl.txt</code>\n\n<blockquote><p>This is <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/perl\" rel=\"noopener noreferrer\">perl</a> 5, version 10</p></blockquote></li>\n</ul>\n</li>\n<li>やっぱそうか！plenvの中の<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/perl\" rel=\"noopener noreferrer\">perl</a>使ってない！\n\n<ul>\n<li><code>*/10 * * * * /home/.plenv/shims/perl /home/script/makeRSS/.pl</code></li>\n<li>動いた・・・うごいたよ・・・</li>\n</ul>\n</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

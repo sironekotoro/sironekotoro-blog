@@ -1,0 +1,12 @@
+{
+  "title": "続・はじめてのPerl 第２版 第１４章 テスト入門",
+  "basename": "2015/09/06/134418",
+  "status": "Publish",
+  "publishedAt": "2015-09-06T04:44:18.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/09/06/134418",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/09/06/134418",
+  "html": "<h1>テスト！</h1>\n\n<ul>\n<li>「<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%C6%A5%B9%A5%C8%B6%EE%C6%B0%B3%AB%C8%AF\" rel=\"noopener noreferrer\">テスト駆動開発</a>」とか聞いたことある！</li>\n<li>[<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%C6%A5%B9%A5%C8%B6%EE%C6%B0%B3%AB%C8%AF\" rel=\"noopener noreferrer\">テスト駆動開発</a> - <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Wikipedia\" rel=\"noopener noreferrer\">Wikipedia</a>]\n(<a href=\"https://ja.wikipedia.org/wiki/%E3%83%86%E3%82%B9%E3%83%88%E9%A7%86%E5%8B%95%E9%96%8B%E7%99%BA\" rel=\"noopener noreferrer\">https://ja.wikipedia.org/wiki/%E3%83%86%E3%82%B9%E3%83%88%E9%A7%86%E5%8B%95%E9%96%8B%E7%99%BA</a>)\n\n<ul>\n<li>この<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/wikipedia\" rel=\"noopener noreferrer\">wikipedia</a>での参考文献が2002年とか</li>\n<li>うちがこの言葉を知ったのは３年か４年くらい前だったような</li>\n</ul>\n</li>\n</ul>\n\n\n<h1>テストのコツ</h1>\n\n<blockquote><p>テストを作るときには、モジュールの作者ではなく、モジュールのユーザーのように考えることです。</p>\n\n<p>成功するはずのことばかりでなく、失敗するはずのことをテストしなければなりません。境界値と中間の値をテストします。境界よりも 1 大きい値や 1 小さい値をテストします。</p></blockquote>\n\n-----",
+  "imageUrls": [],
+  "features": []
+}

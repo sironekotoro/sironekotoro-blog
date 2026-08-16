@@ -1,0 +1,16 @@
+{
+  "title": "Perl入学式 ＃1,2 練習問題",
+  "basename": "2013/09/23/160347",
+  "status": "Publish",
+  "publishedAt": "2013-09-23T07:03:47.000Z",
+  "categories": [
+    "Perl入学式"
+  ],
+  "oldPath": "/entry/2013/09/23/160347",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2013/09/23/160347",
+  "html": "<h1><a href=\"http://perl-entrance.org/2013/handout/perlentrance01-2/index.html#/title\" rel=\"noopener noreferrer\">Perl入学式 #1</a></h1>\n\n<p>plenvとかperlbrewってのが導入する意味が不明だったけど、もとからOSに入っている<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/perl\" rel=\"noopener noreferrer\">perl</a>を汚したくないって理由で腑に落ちた。</p>\n\n<p>練習問題</p>\n\n<blockquote><p>print命令を複数個使って, あなたのプロフィール(名前, 年齢, 大学etc...)を表示するスクリプトを書いてみよう</p></blockquote>\n\n<p><a href=\"http://codepad.org/6GyUrr75\" rel=\"noopener noreferrer\">自分の答え</a></p>\n\n<h1><a href=\"http://perl-entrance.org/2013/handout/perlentrance02/index.html#/title\" rel=\"noopener noreferrer\">Perl入学式 #2</a></h1>\n\n<p>練習問題</p>\n\n<blockquote><p>先程の冒頭の3行のおまじないを加えた上で, Hello, Worldという文字列を出力するhello.plを作成しよう</p></blockquote>\n\n<p><a href=\"http://codepad.org/5Ipv6EVs\" rel=\"noopener noreferrer\">自分の答え</a></p>\n\n<p>練習問題</p>\n\n<blockquote><p>自分の名前, 年齢, 身長などの情報をそれぞれname, age, heightといった変数に格納し, それらの値を出力するスクリプト profile.plを作成しよう\n use strict, use warningsを使おう</p></blockquote>\n\n<p><a href=\"http://codepad.org/xs6qsHl6\" rel=\"noopener noreferrer\">自分の答え</a></p>\n\n<p>練習問題</p>\n\n<blockquote><p>標準入力から変数を2つ読み込み, それらを四則演算(+, -, *, /)した結果を出力するスクリプト calc.plを作成しよう</p></blockquote>\n\n<p><a href=\"http://codepad.org/ur8Zhp6S\" rel=\"noopener noreferrer\">自分の答え</a>\n標準入力できないからcodepadでエラー出ちゃうんかな</p>\n\n<p>練習問題</p>\n\n<blockquote><p>簡単な文字当てゲーム question_word.plを作成しよう\n 端末から文字列を一つ入力し, その文字列が$answerと一致したらOK, 外れたらNGと表示する</p></blockquote>\n\n<p><a href=\"http://codepad.org/qU42rcMo\" rel=\"noopener noreferrer\">自分の答え</a></p>\n\n<p>練習問題</p>\n\n<blockquote><p>簡単な数当てゲーム question_num.plを作成しよう\n  端末から数字を一つ入力し, その数字が$answerと一致したらOK, $answerより大きければtoo big, 小さければtoo smallと表示する\n  オプション: 入力した値が, $answerから-5〜+5の範囲内($answerが10なら, 5〜15)の場合, nearと表示するようにしてみよう</p></blockquote>\n\n<p><a href=\"http://codepad.org/kGhrStTt\" rel=\"noopener noreferrer\">自分の答え</a></p>\n\n<p>練習問題</p>\n\n<blockquote><p>配列@arrayにを使って3つの文字列を格納し, これを｢文字列として｣ソートしたものを出力するsort.plを書いてみよう\n  ヒント: @arrayに文字列を3個入力する処理は, for文を使ってシンプルに書いてみよう</p></blockquote>\n\n<p><a href=\"http://codepad.org/kClGT0yn\" rel=\"noopener noreferrer\">自分の答え</a></p>\n\n<p>最終問題</p>\n\n<blockquote><p><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/FizzBuzz%CC%E4%C2%EA\" rel=\"noopener noreferrer\">FizzBuzz問題</a>にチャレンジ!!\n  1から100までの数字について, その数字が3で割り切れるなら<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Fizz\" rel=\"noopener noreferrer\">Fizz</a>, 5で割り切れるならBuzz, 3でも5でも割り切れるなら<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/FizzBuzz\" rel=\"noopener noreferrer\">FizzBuzz</a>, それ以外ならばその数字自身を出力する<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/fizzbuzz\" rel=\"noopener noreferrer\">fizzbuzz</a>.plを作成しよう</p></blockquote>\n\n<p><a href=\"http://codepad.org/5i7Gn9Bj\" rel=\"noopener noreferrer\">自分の答え</a></p>\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Perlトレーニングブック Part 01 〜 03",
+  "basename": "2014/04/12/125424",
+  "status": "Publish",
+  "publishedAt": "2014-04-12T03:54:24.000Z",
+  "categories": [],
+  "oldPath": "/entry/2014/04/12/125424",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2014/04/12/125424",
+  "html": "<h1><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>トレーニングブック Part 01 〜</h1>\n\n<ul>\n<li>家にたまっている<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>本を片付けプロジェクト</li>\n<li>今回はこれ。</li>\n</ul>\n\n\n<iframe loading=\"lazy\" sandbox=\"allow-scripts allow-same-origin allow-popups\" referrerpolicy=\"no-referrer\"></iframe>\n\n\n<h2><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>トレーニングブック Part 01</h2>\n\n<blockquote><p><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>の言語体系はとにかく記号を多用するため、最初は取っ付きにくい感がありますが、ようは慣れです</p></blockquote>\n\n<ul>\n<li>心強い</li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Windows\" rel=\"noopener noreferrer\">Windows</a>用<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>の定番、ActivePerl出しているActiveState社って、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Microsoft\" rel=\"noopener noreferrer\">Microsoft</a>と<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%AA%A5%E9%A5%A4%A5%EA%A1%BC\" rel=\"noopener noreferrer\">オライリー</a>の協業だったんだ・・・知らんかった。</li>\n</ul>\n\n\n<h2><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>トレーニングブック Part 02</h2>\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Windows\" rel=\"noopener noreferrer\">Windows</a>の<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%B3%A5%DE%A5%F3%A5%C9%A5%E9%A5%A4%A5%F3\" rel=\"noopener noreferrer\">コマンドライン</a>操作とか、ActivePerlのインストール等についての章</li>\n<li>環境整備は大事だけど面倒だよねぇ</li>\n<li>PATHの説明とか、わかる人にはわかるんだけど、わからない人にとっては壁だよなぁ。</li>\n<li>行末の「;」とかの説明が無かったような。本当の初心者には厳しいような気もする。</li>\n</ul>\n\n\n<h2><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>トレーニングブック Part 03</h2>\n\n<ul>\n<li>この本が出た当初は<code>use strict</code>,<code>use warnings</code>は一般的ではなかったのかな。</li>\n<li>おー、=pod 〜 =cut はperldocで見る事が出来るんだ\n\n<ul>\n<li>む、日本語は文字化けするな・・・</li>\n</ul>\n</li>\n<li><code>print \"@array\"</code> で配列の一覧をだすときの区切り文字を<code>＄” = ':'</code>で変更できる\n\n<ul>\n<li>ふむふむ</li>\n</ul>\n</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

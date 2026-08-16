@@ -1,0 +1,14 @@
+{
+  "title": "serverman VPSでsendmailの設定 その他",
+  "basename": "2013/12/23/164900",
+  "status": "Publish",
+  "publishedAt": "2013-12-23T07:49:00.000Z",
+  "categories": [],
+  "oldPath": "/entry/2013/12/23/164900",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2013/12/23/164900",
+  "html": "<h3>うごかない を　うごかす</h3>\n\n<ul>\n<li>最終的には動かせたけど、どうして動いたのかよくわからない\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/google\" rel=\"noopener noreferrer\">google</a>様に「VPS sendmai」「<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/linux\" rel=\"noopener noreferrer\">linux</a> <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/sendmail\" rel=\"noopener noreferrer\">sendmail</a>」「<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/sendmail\" rel=\"noopener noreferrer\">sendmail</a> 初心者」とかで検索しまくって、いろんなサイトに書いてあることを参考にひたすら設定ファイル書き換え</li>\n</ul>\n</li>\n<li>とりあえず、送信専用で、root宛の通知を<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/gmail\" rel=\"noopener noreferrer\">gmail</a>のアカウントから送信できるように設定\n\n<ul>\n<li>踏み台になるの怖い</li>\n</ul>\n</li>\n<li>設定が終わった後に、「メール送りたかったんなら、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>のスクリプトで良かったんじゃね？」と心の声が</li>\n</ul>\n\n\n<h3>Email::Sendが動く</h3>\n\n<ul>\n<li>「<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/CPAN\" rel=\"noopener noreferrer\">CPAN</a> モジュールガイド」、マジで神</li>\n<li>あっさり、あっさりメールが送信できた。すごい。</li>\n</ul>\n\n\n<h3>VPSにあげたスクリプトがおかしい</h3>\n\n<ul>\n<li>動いているんだけど、妙。\n\n<ul>\n<li>cronの結果をメールで受け取るようになって気づいた。</li>\n</ul>\n</li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/SQLite\" rel=\"noopener noreferrer\">SQLite</a>に情報を溜め込んでいるんだけど、全件表示させようとすると最初の１行目が出力されない。</li>\n<li>ソートして逆順とかで表示させると、元の１行目はちゃんと出てくる・・・が、今度は最終行が表示されない。\n\n<ul>\n<li>とりあえず、DBに登録はされているっぽい。</li>\n</ul>\n</li>\n<li>DBIx::Customを使うとちゃんと表示される。</li>\n<li>なんなんだろ・・・</li>\n<li>後で質問用とか検証用のスクリプト作ってみよう。<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/SQLite\" rel=\"noopener noreferrer\">SQLite</a>はメモリ上にDB展開できるから。</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

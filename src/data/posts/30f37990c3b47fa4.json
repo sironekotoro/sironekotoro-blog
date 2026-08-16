@@ -1,0 +1,14 @@
+{
+  "title": "業務に役立つPerl 第1章〜2章",
+  "basename": "2015/10/17/142132",
+  "status": "Publish",
+  "publishedAt": "2015-10-17T05:21:32.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/10/17/142132",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/10/17/142132",
+  "html": "<h1>以前からお世話になっていた</h1>\n\n<ul>\n<li>うちの勤務先のビル1Fには本屋さんが入っていて、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>の本も３〜５冊くらい置いてあったりする。</li>\n<li>その中で、結構長いこと置いてあったのがこの本だった。</li>\n</ul>\n\n\n<iframe loading=\"lazy\" sandbox=\"allow-scripts allow-same-origin allow-popups\" referrerpolicy=\"no-referrer\"></iframe>\n\n\n<ul>\n<li>うまく動かないとこの本を立ち読みしにいき、ほぼ毎日行くような感じだったので購入。</li>\n<li>もちろん、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>で何かを書いていて、用例やエラーメッセージでググったりすると作者さんのページがヒットすることもあり、ずいぶんと助けられた。\n\n<ul>\n<li><a href=\"http://d.hatena.ne.jp/perlcodesample/\" rel=\"noopener noreferrer\">サンプルコードによるPerl入門</a></li>\n</ul>\n</li>\n</ul>\n\n\n<h1>初心者向け本、ではなかった</h1>\n\n<ul>\n<li>初心者向け本巡りの中での一冊、というつもりだったけど・・・\n\n<blockquote><p>本書では読者の皆さんが<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>以外の言語を勉強していることを前提とさせてください</p></blockquote></li>\n<li>おぉ、そうであったか。</li>\n<li>目次とか見ても、今のうちが読み進めるには問題なさそうと判断</li>\n<li>今日やった第二章までは本当に駆け足での<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>の紹介</li>\n</ul>\n\n\n<h1>もう一つ</h1>\n\n<ul>\n<li>iTerm2,SublimeText2などが<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Emacs\" rel=\"noopener noreferrer\">Emacs</a><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%AD%A1%BC%A5%D0%A5%A4%A5%F3%A5%C9\" rel=\"noopener noreferrer\">キーバインド</a>でカーソルが動くことを発見したんで、なじんでいきたい。\n\n<ul>\n<li>capsキーはcontrolキーに変更済</li>\n</ul>\n</li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Emacs\" rel=\"noopener noreferrer\">Emacs</a>は憧れ</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

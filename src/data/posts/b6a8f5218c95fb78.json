@@ -1,0 +1,14 @@
+{
+  "title": "はじめてのPerl 第６版 第８章 正規表現によるマッチ",
+  "basename": "2015/03/14/153719",
+  "status": "Publish",
+  "publishedAt": "2015-03-14T06:37:19.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/03/14/153719",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/03/14/153719",
+  "html": "<h1>いきなり</h1>\n\n<blockquote><p>7 章では、/fred/のように、パターンをスラッシュではさんで指定していました。しかし、実 を言うと、これはm//<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%B1%E9%BB%BB%BB%D2\" rel=\"noopener noreferrer\">演算子</a>(パターンマッチ<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%B1%E9%BB%BB%BB%D2\" rel=\"noopener noreferrer\">演算子</a>:pattern match operator)のショートカッ トなのです。</p></blockquote>\n\n<ul>\n<li>そうなん！？</li>\n</ul>\n\n\n<blockquote><p>m//<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%B1%E9%BB%BB%BB%D2\" rel=\"noopener noreferrer\">演算子</a>のショートカットとは、スラッシュがデリミタの場合には、先頭の mを省略できると いうものです。</p></blockquote>\n\n<ul>\n<li>知らんかった・・・知らないで使ってたわ・・・</li>\n</ul>\n\n\n<pre class=\"code lang-perl\" data-lang=\"perl\" data-unlink>\n<span class=\"synStatement\">my</span> <span class=\"synIdentifier\">$temp</span> = <span class=\"synConstant\">'http://www.yahoo.com'</span>;\n\n<span class=\"synStatement\">if</span> (<span class=\"synIdentifier\">$temp</span> =~ <span class=\"synStatement\">m[</span><span class=\"synConstant\">www</span><span class=\"synStatement\">]</span> ){\n    <span class=\"synStatement\">say</span> <span class=\"synConstant\">\"MATCH\"</span>;   <span class=\"synComment\"># MATCH</span>\n}\n</pre>\n\n\n<ul>\n<li>ほんとだ！</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "はじめてのPerl 第６版 第１５章 スマートマッチとgiven-when",
+  "basename": "2015/05/23/104225",
+  "status": "Publish",
+  "publishedAt": "2015-05-23T01:42:25.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/05/23/104225",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/05/23/104225",
+  "html": "<h1>スマートマッチすごい</h1>\n\n<ul>\n<li>便利だけど、コレ推奨されないだろうなぁ・・・と思った。</li>\n<li>安定性強化に向けて機能を整理した「<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> 5.18」リリース | OSDN Magazine\n(<a href=\"http://osdn.jp/magazine/13/05/20/141500\" rel=\"noopener noreferrer\">http://osdn.jp/magazine/13/05/20/141500</a>)</li>\n</ul>\n\n\n<blockquote><p>さらに、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> 5.10で加わったスマートマッチ<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%B1%E9%BB%BB%BB%D2\" rel=\"noopener noreferrer\">演算子</a>は実験的（exprimental）なカテゴリに変更された。これは2つの<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%AA%A5%DA%A5%E9%A5%F3%A5%C9\" rel=\"noopener noreferrer\">オペランド</a>をどのように比較するのかを判断する機能だが、不満が多く出ておりゆくゆくは変更されるか廃止となるだろうとしている。</p></blockquote>\n\n<h1>given-when文</h1>\n\n<blockquote><p>whenブロックの最後に continueを置くと、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/perl\" rel=\"noopener noreferrer\">perl</a> は、それ以降の when条件も順にテストしていきます。</p></blockquote>\n\n<ul>\n<li>なるほど、これは確かにif文ではできない</li>\n<li><p>でも、最後のdefaultのブロックが常に真で評価されるため、defaultブロックの一つ前のwhenブロックにはcontinueを付けない、ってのはなんか美しくないなー</p></li>\n<li><p>そしてやっぱり非推奨\n<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> 5.18 がリリースされました - サンプルコードによる<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>入門 ～ 安定と信頼の<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>を学ぼう ～\n(<a href=\"http://d.hatena.ne.jp/perlcodesample/20130520/1369010841\" rel=\"noopener noreferrer\">http://d.hatena.ne.jp/perlcodesample/20130520/1369010841</a>)</p></li>\n</ul>\n\n\n<blockquote><p>次に、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> 5.10移行で導入された、given - when構文とスマートマッチ(~~)が実験的な機能に差し戻されました。</p></blockquote>\n\n<ul>\n<li> この章の意義とは</li>\n</ul>\n\n\n<h1>練習問題</h1>\n\n<ul>\n<li>約数に2があるかどうかで偶数奇数を判断するってのに気付かなかったわ・・・</li>\n<li>他にも方法はあるんだろうけど、スマートな方法だよな</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

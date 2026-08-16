@@ -1,0 +1,14 @@
+{
+  "title": "続・はじめてのPerl 第２版 第５章 リファレンスとスコープ",
+  "basename": "2015/06/20/144325",
+  "status": "Publish",
+  "publishedAt": "2015-06-20T05:43:25.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/06/20/144325",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/06/20/144325",
+  "html": "<h1>無名配列</h1>\n\n<ul>\n<li>そういうことなんですか！と</li>\n</ul>\n\n\n<pre class=\"code lang-perl\" data-lang=\"perl\" data-unlink>\n<span class=\"synStatement\">my</span> <span class=\"synIdentifier\">$ref</span>;\n{\n<span class=\"synStatement\">my</span> <span class=\"synIdentifier\">@skipper</span> = <span class=\"synConstant\">qw(blue_shirt hat jacket preserver sunscreen)</span>; <span class=\"synIdentifier\">$ref</span> = \\<span class=\"synIdentifier\">@skipper</span>;\n<span class=\"synStatement\">print</span> <span class=\"synConstant\">\"</span><span class=\"synIdentifier\">$ref-&gt;[</span><span class=\"synConstant\">2</span><span class=\"synIdentifier\">]</span><span class=\"synSpecial\">\\n</span><span class=\"synConstant\">\"</span>; <span class=\"synComment\"># jacket\\nを表示 </span>\n}\n<span class=\"synStatement\">print</span> <span class=\"synConstant\">\"</span><span class=\"synIdentifier\">$ref-&gt;[</span><span class=\"synConstant\">2</span><span class=\"synIdentifier\">]</span><span class=\"synSpecial\">\\n</span><span class=\"synConstant\">\"</span>; <span class=\"synComment\"># ここでもまだjacket\\nを表示、参照カウントは1</span>\n</pre>\n\n\n<ul>\n<li>ほうほう</li>\n<li>配列@skipperはスコープが終わるとそこで消滅するけど、リファレンスだけは残っており、参照が可能と。\n\n<ul>\n<li>でも、何のために無名配列があるんだろう？</li>\n<li>どういうときに使うのか、いまいち想像がつかない</li>\n</ul>\n</li>\n</ul>\n\n\n<h1>無名ハッシュ</h1>\n\n<ul>\n<li>・・・ふと、今まで勉強してきた配列やハッシュは不要で、全部無名配列と無名ハッシュでいいんじゃね？とか思い始める</li>\n<li>でも、そうしたら初心者にきつそうな気もする。</li>\n<li>シジルと ( [ { の嵐でとっつきにくそう\n\n<ul>\n<li>そんでメモリの使用量が無駄に多くなりそう</li>\n</ul>\n</li>\n</ul>\n\n\n<h1>練習問題 5-2</h1>\n\n<ul>\n<li>降参。</li>\n<li>回答が効率的で美しくて、自分の発想の貧困さに泣ける\n\n<ul>\n<li>ファイルから読み込むのと同時に変数に入れてる</li>\n<li>それだけではなく、この時点でソースごとの合計値も出してる</li>\n<li>ハッシュのsortに苦手感</li>\n</ul>\n</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

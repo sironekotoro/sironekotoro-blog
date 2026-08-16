@@ -1,0 +1,14 @@
+{
+  "title": "あれ？",
+  "basename": "2015/01/18/122106",
+  "status": "Publish",
+  "publishedAt": "2015-01-18T03:43:14.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/01/18/122106",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/01/18/122106",
+  "html": "<h1>記事が・・・ない？</h1>\n\n<ul>\n<li>そういえばしばらく自作<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8\" rel=\"noopener noreferrer\">スクリプト</a>ばっかで、勉強進んでないなぁ</li>\n<li>って思って自分のブログ（ここ）見てみたら、記事がアップされてない</li>\n<li>８月以降には「１０日で覚える<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>/<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/CGI\" rel=\"noopener noreferrer\">CGI</a>入門」を終わらせ、「はじめての<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> 第６版」に進んでいるんだけど・・・</li>\n<li>MarsEditから上げてるんで、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Mac\" rel=\"noopener noreferrer\">Mac</a>側に下書きで残ってるだろー、と思ってみて見るも、無い</li>\n<li>自分の勉強の記録消えるのツラいものがある</li>\n<li>いくつか残ってるのを上げていこう・・・</li>\n</ul>\n\n\n<h1>じゃ何を作ってたか</h1>\n\n<ul>\n<li>書き捨てログパーサ（お仕事</li>\n<li>株価チェック用DB構築\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Web%3A%3AScraper\" rel=\"noopener noreferrer\">Web::Scraper</a>で過去の株価取得</li>\n<li>取得した株価をごにょごにょして、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/sqlite\" rel=\"noopener noreferrer\">sqlite</a>にinsert</li>\n</ul>\n</li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Tumblr\" rel=\"noopener noreferrer\">Tumblr</a>の<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/API\" rel=\"noopener noreferrer\">API</a>使って半自動Post</li>\n</ul>\n\n\n<h1>2014を振り返り</h1>\n\n<ul>\n<li>返す返すも、2013年度に<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>入学式で受講し、練習問題でリファレンス勉強できたのが大きい</li>\n<li>大きいっていうか、これ無しでよくやって来れたなと</li>\n<li>今はリファレンスのおかげで複雑なデータ構造をサブルーチンに渡してぽいーです\n\n<ul>\n<li>以前どうやってたかを思い出すと、何とサブルーチン間の変数の受け渡し用にテンポラリのファイルを作って、そこ経由でやり取りしてた</li>\n<li>力技</li>\n<li>逆にすごい</li>\n</ul>\n</li>\n<li>できる事が広がったおかげで後半は勉強が進まなくなったのが問題\n\n<ul>\n<li>つい、できる事、成果が見える「自作<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8\" rel=\"noopener noreferrer\">スクリプト</a>」の方に行ってしまう</li>\n</ul>\n</li>\n<li>ここは時間を天引きするべく、過去にうまく行ったように土曜日を勉強に充てるとか、そういう割り振りしていきたい</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "続・はじめてのPerl 第２版 第８章 ファイルハンドルへのリファレンス",
+  "basename": "2015/08/29/115745",
+  "status": "Publish",
+  "publishedAt": "2015-08-29T02:57:45.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/08/29/115745",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/08/29/115745",
+  "html": "<h1>8.2 改良された方法</h1>\n\n<ul>\n<li>今までの初心者本では、だいたいこんな感じでファイルを開いていた</li>\n</ul>\n\n\n<pre class=\"code lang-perl\" data-lang=\"perl\" data-unlink><span class=\"synStatement\">open</span> <span class=\"synConstant\">'FILE'</span> , <span class=\"synConstant\">'&lt;'</span> , <span class=\"synConstant\">\"source.txt\"</span> <span class=\"synStatement\">or</span> <span class=\"synStatement\">die</span> (<span class=\"synConstant\">\"error :</span><span class=\"synIdentifier\">$!</span><span class=\"synConstant\">\"</span>);\n    <span class=\"synStatement\">foreach</span> (<span class=\"synIdentifier\">&lt;FILE&gt;</span>){\n        <span class=\"synStatement\">print</span> ;\n    }\n<span class=\"synStatement\">close</span><span class=\"synConstant\">'FILE'</span>;\n\n</pre>\n\n\n<ul>\n<li>ファ<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%A4%A5%EB%A5%CF%A5%F3\" rel=\"noopener noreferrer\">イルハン</a>ドルを変数で扱うとこうなる・・・のかな？</li>\n</ul>\n\n\n<pre class=\"code lang-perl\" data-lang=\"perl\" data-unlink>\n{\n    <span class=\"synStatement\">open</span> <span class=\"synStatement\">my</span> <span class=\"synIdentifier\">$FILE</span> , <span class=\"synConstant\">'&lt;'</span> , <span class=\"synConstant\">\"source.txt\"</span> <span class=\"synStatement\">or</span> <span class=\"synStatement\">die</span> (<span class=\"synConstant\">\"error :</span><span class=\"synIdentifier\">$!</span><span class=\"synConstant\">\"</span>);\n    <span class=\"synStatement\">foreach</span> (&lt;<span class=\"synIdentifier\">$FILE</span>&gt;){\n        <span class=\"synStatement\">print</span> ;\n    }\n}\n</pre>\n\n\n<ul>\n<li>スコープが外れると自動的にファイルはクローズされるとのこと。\n\n<ul>\n<li>ちょっとだけ楽になる？</li>\n<li>明示的にファ<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%A4%A5%EB%A5%CF%A5%F3\" rel=\"noopener noreferrer\">イルハン</a>ドル閉じてないようで、なんか気にはなるんだけど</li>\n</ul>\n</li>\n</ul>\n\n\n<h1>8.3 文字列へのファ<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%A4%A5%EB%A5%CF%A5%F3\" rel=\"noopener noreferrer\">イルハン</a>ドル</h1>\n\n<ul>\n<li>すげぇ、これもなんでこういうことが必要なのか解らん・・・</li>\n<li>標準出力とか、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%C9%B8%BD%E0%A5%A8%A5%E9%A1%BC%BD%D0%CE%CF\" rel=\"noopener noreferrer\">標準エラー出力</a>に振り分けて出力するためとか・・・？</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

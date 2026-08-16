@@ -1,0 +1,14 @@
+{
+  "title": "Excel VBAスタンダード 公式テキスト ３章 プロシージャ",
+  "basename": "2014/06/14/164108",
+  "status": "Publish",
+  "publishedAt": "2014-06-14T07:41:08.000Z",
+  "categories": [],
+  "oldPath": "/entry/2014/06/14/164108",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2014/06/14/164108",
+  "html": "<h1>3-1 他のプロシージャを呼び出す</h1>\n\n<ul>\n<li>モジュール内に存在するプロシージャを呼び出すには<code>Call</code>という命令を使う</li>\n</ul>\n\n\n<h1>3-2 Functionプロシージャ</h1>\n\n<ul>\n<li>実行の結果を呼び出し元に返す</li>\n<li><code>Function Tax(Num As Long) As Long</code>\n\n<ul>\n<li><code>Function</code>:プロシージャの種別</li>\n<li><code>Tax</code>:プロシージャ名称</li>\n<li><code>(Num As Long)</code>:受け取る値、引数</li>\n<li><code>As Long</code>:返す型</li>\n</ul>\n</li>\n<li>受け取った引数の変数名を宣言するのか・・・\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>のサブルーチン内で<code>my ($foo) = @_</code>ってのと同じ事なんかな</li>\n</ul>\n</li>\n</ul>\n\n\n<h1>3-3 プロシージャの引数</h1>\n\n<ul>\n<li>参照渡し：変数そのものを渡す\n\n<ul>\n<li>引数の定義に<code>ByRef</code>をつける</li>\n</ul>\n</li>\n<li>値渡し：変数の値だけ渡す\n\n<ul>\n<li>引数の定義に<code>Byval</code>をつける</li>\n</ul>\n</li>\n</ul>\n\n\n<blockquote><p>「参照渡し」とか「値渡し」というと、渡す側に違いがあるように感じますが、実際には引数をどのように受け取るかと行った、プロシージャの定義がポイントなのです</p></blockquote>\n\n<ul>\n<li>「値受け取り」「参照受け取り」ではダメだったんかなぁ・・・深遠な理由？</li>\n<li>省略可能な引数を定義する場合\n\n<ul>\n<li>引数の受け取り側で、引数名の前に<code>Optional</code>を付ける</li>\n<li>引数の定義時に初期値を設定しておく（3を初期値とする）\n\n<ul>\n<li><code>Optional Foo As Long = 3</code></li>\n</ul>\n</li>\n<li>引数が省略されたかどうかを調べる\n\n<ul>\n<li><code>IsMissing</code>関数を使い、そこで初期値を設定する</li>\n<li><code>If IsMissing(n) = True Then n = 3</code></li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

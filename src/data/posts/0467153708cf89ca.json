@@ -1,0 +1,14 @@
+{
+  "title": "モダンPerl入門 第1章 近代的なオブジェクト指向",
+  "basename": "2016/11/03/104856",
+  "status": "Publish",
+  "publishedAt": "2016-11-03T01:48:56.000Z",
+  "categories": [],
+  "oldPath": "/entry/2016/11/03/104856",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2016/11/03/104856",
+  "html": "<h1>増補改訂版を待ちながら</h1>\n\n<ul>\n<li>(<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%E2%A5%C0%A5%F3Perl%C6%FE%CC%E7\" rel=\"noopener noreferrer\">モダンPerl入門</a>増補改訂版（仮）)<a href=\"http://codezine.jp/book/modernperl2\" rel=\"noopener noreferrer\">http://codezine.jp/book/modernperl2</a></li>\n<li>なお\n\n<blockquote><p>初版　： 2009年2月9日<br />\n刊行日： 2014年1月予定</p></blockquote></li>\n<li>待っていても仕方ないので、今あるものでなんとかする！</li>\n</ul>\n\n\n<h1>感慨深い</h1>\n\n<ul>\n<li>中級者以上と銘打っているだけあって、最初は全く歯が立たずに後回しにしていた本・・・</li>\n<li>しかし、今は「わかる！わかるぞ！」と<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%E9%A5%D4%A5%E5%A5%BF\" rel=\"noopener noreferrer\">ラピュタ</a>内部の石盤前にいる<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%E0%A5%B9%A5%AB\" rel=\"noopener noreferrer\">ムスカ</a>の気分に\n\n<ul>\n<li>もちろん全部ではない</li>\n</ul>\n</li>\n</ul>\n\n\n<h1><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%AA%A5%D6%A5%B8%A5%A7%A5%AF%A5%C8%BB%D8%B8%FE\" rel=\"noopener noreferrer\">オブジェクト指向</a>を学ぶには・・・</h1>\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>だけではなく、やはり本家の<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Java\" rel=\"noopener noreferrer\">Java</a>も学ばねばならないのだろうか？</li>\n<li>いやいや、それをいうなら元祖<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/smalltalk\" rel=\"noopener noreferrer\">smalltalk</a>から</li>\n<li>そもそも、なんで<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%AA%A5%D6%A5%B8%A5%A7%A5%AF%A5%C8%BB%D8%B8%FE\" rel=\"noopener noreferrer\">オブジェクト指向</a>を学ぶのか？学ぶ事自体が目的なのか？</li>\n<li>学ぶ事自体は楽しいんだけど、それだけではうちの作りたいプログラムが完成しないんよね・・・</li>\n</ul>\n\n\n<h1>そもそも</h1>\n\n<ul>\n<li>「必要な事だけ学べればいい」って思っていたけど、「必要なものが何か」が分かっていないのが初心者</li>\n<li>「リファレンス？無くてもプログラム作れるじゃーん」と思っていた数年前の自分を思い出す</li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%AA%A5%D6%A5%B8%A5%A7%A5%AF%A5%C8%BB%D8%B8%FE\" rel=\"noopener noreferrer\">オブジェクト指向</a>もそう</li>\n<li>必要になったときに学ぶ、でも良いんかな。今までもそうだったし</li>\n<li>解決の選択肢を多く持っておけば、あとあと楽になるだけど、時間とお金の<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%C8%A5%EC%A1%BC%A5%C9%A5%AA%A5%D5\" rel=\"noopener noreferrer\">トレードオフ</a>なのよね</li>\n<li>うまく出来てる</li>\n<li>こういう事を中学生で分かってたら、人生変わってたかしらねぇ・・・</li>\n</ul>\n\n\n<h1><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Moose\" rel=\"noopener noreferrer\">Moose</a></h1>\n\n<ul>\n<li>初心者ながらに「重い・多機能」という事だけは知っていたモジュール</li>\n<li>手作りでオブジェクトを <code>bless</code> していて感じつつあった、オブジェクトのプロパティの整合性を確認する方法なんかが組み込まれてて、「あぁ、俺の疑問はたいてい先人が解決してくれている」と感謝を新たに</li>\n<li>Roleって考え方もいい。継承だけではなく、役割・出来る事での関連性でクラスをまとめられる。素敵！</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

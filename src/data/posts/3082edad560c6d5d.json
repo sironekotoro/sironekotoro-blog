@@ -1,0 +1,14 @@
+{
+  "title": "かんたんPerl 第12章 モジュール入門/フォルダー処理、CGI",
+  "basename": "2016/03/06/110545",
+  "status": "Publish",
+  "publishedAt": "2016-03-06T02:05:45.000Z",
+  "categories": [],
+  "oldPath": "/entry/2016/03/06/110545",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2016/03/06/110545",
+  "html": "<h1>いよいよ最終章</h1>\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/CPAN\" rel=\"noopener noreferrer\">CPAN</a> は シーパン 読み派</li>\n<li>File::Find つかってるけど、このモジュール、「続・はじめての<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>」でも使ってたし、なにか定番というかお約束なのだろうか。</li>\n</ul>\n\n\n<h1><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/CGI\" rel=\"noopener noreferrer\">CGI</a></h1>\n\n<ul>\n<li>大昔、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/CGI\" rel=\"noopener noreferrer\">CGI</a>の本を手に取った事もあったんだけど、さっぱり分からなかった。</li>\n<li>何が分からないかというと、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>での処理の結果をどう<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Apache\" rel=\"noopener noreferrer\">Apache</a>に渡すのか？あるいは逆ということ。</li>\n<li>表の HTML と裏で動いているプログラムが OS の<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4\" rel=\"noopener noreferrer\">環境変数</a>使って値をやり取りしている、ということが理解できるようになるには、いろんな偶然が必要だったなぁ、と思う\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Linux\" rel=\"noopener noreferrer\">Linux</a> のサーバ運用の仕事に就いた、とか</li>\n</ul>\n</li>\n<li>というか、簡単なWeb掲示板を実現するにも、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/CGI\" rel=\"noopener noreferrer\">CGI</a>/<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> , <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Apache\" rel=\"noopener noreferrer\">Apache</a> , OS の知識が必要で、割とハードル高いんよね・・・\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8\" rel=\"noopener noreferrer\">スクリプト</a>の掲示板あっても、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%D1%A1%BC%A5%DF%A5%C3%A5%B7%A5%E7%A5%F3\" rel=\"noopener noreferrer\">パーミッション</a>やら設置場所やらで挫折した人おおそう（含む自分</li>\n</ul>\n</li>\n</ul>\n\n\n<h1>さて次は</h1>\n\n<ul>\n<li>何の <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> 本にしようかなぁ</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

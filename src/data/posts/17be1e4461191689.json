@@ -1,0 +1,17 @@
+{
+  "title": " Perl入学式 オンライン 2020 第4回お疲れ様でした",
+  "basename": "2021/01/24/160029",
+  "status": "Publish",
+  "publishedAt": "2021-01-24T07:00:29.000Z",
+  "categories": [
+    "Perl入学式"
+  ],
+  "oldPath": "/entry/2021/01/24/160029",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2021/01/24/160029",
+  "html": "<p>受講された方、サポーターの方、お疲れ様でした。 講師をやったパーカーの人です。</p>\n\n<p>講義に利用したスライド・動画類は以下 <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> 入学式の公式サイトで公開しています。参加された方も、参加できなかった方も、ぜひ復習に使ってください。</p>\n\n<p><iframe title=\"App::RevealSlideShare\" class=\"embed-card embed-webcard\" loading=\"lazy\" sandbox=\"allow-scripts allow-same-origin allow-popups\" referrerpolicy=\"no-referrer\"></iframe><cite class=\"hatena-citation\"><a href=\"https://appslideshare.tugougaii.site/slide/Online2020?p=4&amp;c=pre-left&amp;cf=1\" rel=\"noopener noreferrer\">appslideshare.tugougaii.site</a></cite></p>\n\n<p>問題の意味がわからない、とか、このような解答例はどうだろう？という方は Discord の <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> 入学式チャンネル（招待コード）や、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/twitter\" rel=\"noopener noreferrer\">twitter</a> で<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%CF%A5%C3%A5%B7%A5%E5%A5%BF%A5%B0\" rel=\"noopener noreferrer\">ハッシュタグ</a> #<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>入学式 をつけて聞いてみてください。</p>\n\n<h2><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>入学式 オンライン 2020 第4回</h2>\n\n<p>今回は以下の項目について学習しました。</p>\n\n<ul>\n<li>配列を操作する関数</li>\n<li>ハッシュ</li>\n</ul>\n\n\n<h2><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> のイベント紹介</h2>\n\n<p>来月、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> のオンラインイベントが開催されます。</p>\n\n<p>コロナ禍によりオフラインイベントである <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/YAPC\" rel=\"noopener noreferrer\">YAPC</a>::Japan は開催できない状況が続いていますが、オンラインで <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> についての話が聞ける貴重な機会です。楽しみですね〜</p>\n\n<p><iframe title=\"Japan.pm 2021 (2021/02/18 17:00〜)\" class=\"embed-card embed-webcard\" loading=\"lazy\" sandbox=\"allow-scripts allow-same-origin allow-popups\" referrerpolicy=\"no-referrer\"></iframe><cite class=\"hatena-citation\"><a href=\"https://yapcjapan.connpass.com/event/198170/\" rel=\"noopener noreferrer\">yapcjapan.connpass.com</a></cite></p>\n\n<h2>次回オンライン第 5 回！</h2>\n\n<p>2021 年の 2 月 27 日開催予定です。</p>\n\n<p>次回はハッシュの操作関数とサブルーチン・<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%C0%B5%B5%AC%C9%BD%B8%BD\" rel=\"noopener noreferrer\">正規表現</a>をやります。</p>\n\n<p>過去の動画や講義資料は <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> 入学式の公式ページに掲載しております。</p>\n\n<p>ぜひ閲覧いただいた上で参加ください！お待ちしております！！</p>\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code",
+    "blog-card"
+  ]
+}

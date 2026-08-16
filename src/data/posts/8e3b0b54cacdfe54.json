@@ -1,0 +1,14 @@
+{
+  "title": "はじめてのPerl 第６版 第１４章 文字列処理とソート",
+  "basename": "2015/05/10/143243",
+  "status": "Publish",
+  "publishedAt": "2015-05-10T05:32:43.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/05/10/143243",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/05/10/143243",
+  "html": "<h1>rindex</h1>\n\n<ul>\n<li>indexのreverse？って勘違いして、部分文字列が行末から数えて合致した・・・とか訳の分からない解釈をしてた。</li>\n<li>もちろん、部分文字列が最後に見つかった場所の（先頭からの）位置を返す</li>\n</ul>\n\n\n<h1>substr関数への代入</h1>\n\n<pre class=\"code\" data-lang data-unlink>my $string = \"Hello World!\";  \nsubstr( $string, 0, 5 ) = \"Goodbye\";  \nsay $string;  #Goodbye World!  </pre>\n\n\n<ul>\n<li>うーん、なんか違和感が</li>\n<li>こっちの方がしっくりくる</li>\n</ul>\n\n\n<pre class=\"code\" data-lang data-unlink>substr( $string, 0, 5 ,\"Goodbye\");</pre>\n\n\n<h1>ドル表記時のカンマ挿入</h1>\n\n<ul>\n<li>このサブルーチンだけでもお腹いっぱいに</li>\n</ul>\n\n\n<pre class=\"code\" data-lang data-unlink>    sub big_money {  \n    my $number = sprintf \"%.2f\" , shift @_;  \n    1 while $number =~ s/^(-?\\d+)(\\d\\d\\d)/$1,$2/;  \n    $number =~ s/^(-?)/$1\\$/;  \n    $number;  \n}</pre>\n\n\n<ul>\n<li>printfつかって小数点以下の桁を調整し、whileの<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%EF%A5%F3%A5%E9%A5%A4%A5%CA%A1%BC\" rel=\"noopener noreferrer\">ワンライナー</a>に、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%C0%B5%B5%AC%C9%BD%B8%BD\" rel=\"noopener noreferrer\">正規表現</a>使った置換、マイナス値だった場合の処理まで</li>\n</ul>\n\n\n<h1><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/YAPC\" rel=\"noopener noreferrer\">YAPC</a>::Asia 2015のチケット入手〜！</h1>\n\n<ul>\n<li><a href=\"http://yapcasia.org/2015/\" rel=\"noopener noreferrer\">YAPC::Asia Tokyo 2015</a></li>\n<li>感謝の気持ちで個人スポンサー枠</li>\n<li>気温だけが心配</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

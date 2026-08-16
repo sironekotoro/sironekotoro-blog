@@ -1,0 +1,12 @@
+{
+  "title": "Excel VBAスタンダード 公式テキスト ５章 イベント",
+  "basename": "2014/07/03/133613",
+  "status": "Publish",
+  "publishedAt": "2014-07-03T04:36:13.000Z",
+  "categories": [],
+  "oldPath": "/entry/2014/07/03/133613",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2014/07/03/133613",
+  "html": "<h1>5-1.イベントとは</h1>\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Excel\" rel=\"noopener noreferrer\">Excel</a>上で特定の操作が行われたとき、その操作が行われた事を<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Excel\" rel=\"noopener noreferrer\">Excel</a>から<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/VBA\" rel=\"noopener noreferrer\">VBA</a>に通知する仕組み</li>\n<li>イベントの連続実行を防ぐには<code>Application.EnableEvents</code>を<code>False</code>で対処する</li>\n<li>’False’のままだと、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Excel\" rel=\"noopener noreferrer\">Excel</a>上でのいっさいのイベントが抑止されるので、プロシージャの最後で'True'にもどすこと</li>\n</ul>\n\n\n<h1>5-2.ブックのイベント</h1>\n\n<ul>\n<li>VBEのプロジェクト<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%A8%A5%AF%A5%B9%A5%D7%A5%ED%A1%BC%A5%E9\" rel=\"noopener noreferrer\">エクスプローラ</a>で[ThisWorkbook]を右クリックして、[コードの表示]を実行する</li>\n<li>Workbook_BeforeClose</li>\n<li>Workbook_BeforePrint</li>\n<li>Workbook_BeforeSave</li>\n<li>Workbook_NewSheet</li>\n<li>Workbook_Open</li>\n</ul>\n\n\n<h1>5-3.シートのイベント</h1>\n\n<ul>\n<li>ワークシート（Worksheetオブジェクト）のイベントを利用するには、VBEのプロジェクト<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%A8%A5%AF%A5%B9%A5%D7%A5%ED%A1%BC%A5%E9\" rel=\"noopener noreferrer\">エクスプローラ</a>で、イベントを登録したいワークシートを右クリックして、[コードの表示]をクリックする</li>\n<li>Worksheet_Activate\n\n<ul>\n<li>ワークシートがアクティブになったときに発生する</li>\n</ul>\n</li>\n<li>Worksheet_BeforeDoubleClick</li>\n<li>Worksheet_BeloreRightClick</li>\n<li>Workshrrt_change</li>\n<li>Worksheet_Deactivate</li>\n<li>Worksheet_SelectionChange</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": []
+}

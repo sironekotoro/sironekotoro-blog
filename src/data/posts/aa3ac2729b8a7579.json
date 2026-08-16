@@ -1,0 +1,14 @@
+{
+  "title": "データをSQLiteに落としこむ",
+  "basename": "2013/12/08/160415",
+  "status": "Publish",
+  "publishedAt": "2013-12-08T07:04:15.000Z",
+  "categories": [],
+  "oldPath": "/entry/2013/12/08/160415",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2013/12/08/160415",
+  "html": "<h3><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/SQLite\" rel=\"noopener noreferrer\">SQLite</a></h3>\n\n<ul>\n<li>ズルしております</li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/FireFox\" rel=\"noopener noreferrer\">FireFox</a>の「<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/SQLite\" rel=\"noopener noreferrer\">SQLite</a> Manager」アドオンを使ってデータベースの骨組みを作る。</li>\n<li>作ったDBに<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>で情報を溜め込んでみたり、読み込んでみたりの実験中。</li>\n</ul>\n\n\n<h3>use strict体質</h3>\n\n<ul>\n<li>use strict 忘れてスクリプト書いて、その後にuse scriptしてもエラーも警告も出なかった。</li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%B3%D4%B3%A4%B9%C4\" rel=\"noopener noreferrer\">郭海皇</a>の「利合が握られていた」を思い出しちゃったね\n\n<ul>\n<li>おおげさ</li>\n</ul>\n</li>\n</ul>\n\n\n<h3>今日の苦労したところ</h3>\n\n<ul>\n<li>DBに登録するときに、重複チェックをかけたかったんだけど、なかなかうまく実装できず。\n\n<ul>\n<li>登録するアイテムのタイトル（文字列）が同じだったらINSERTしない、ってのを書いたんだけど、DB側で文字列の比較演算する方法でつまずく。</li>\n</ul>\n</li>\n<li>次に、DB登録時にユニークなID（整数）を加えて、それで登録済みかどうかを比較する方法へ。\n\n<ul>\n<li>追加登録するするときには、まずユニークな値でDBを検索。\n\n<ul>\n<li>検索にヒットしなかった場合にはDBにINSERT</li>\n</ul>\n</li>\n<li>検索にヒットしたら何もしない</li>\n<li>これならうまく行くだろ！\n\n<ul>\n<li>いかない</li>\n<li>検索にヒットしなかった時に、そのアイテムの情報が返ってこない・・・？</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>新規登録アイテムのユニーク番号の集合と、DB登録済みのユニーク番号の集合を比較し、差集合をとる\n\n<ul>\n<li>なんか、もっとスマートな方法があるんじゃないか\n\n<ul>\n<li>今はこれが精一杯（<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%AB%A5%EA%A5%AA%A5%B9%A5%C8%A5%ED%A4%CE%BE%EB\" rel=\"noopener noreferrer\">カリオストロの城</a>風）</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n\n\n<h3>あんれ？</h3>\n\n<ul>\n<li>レッツ serverman VPSで稼働！と思ったら<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/DBI\" rel=\"noopener noreferrer\">DBI</a>が無いって怒られる。\n\n<ul>\n<li><code>cpanm --sudo DBD::SQLite</code></li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/DBI\" rel=\"noopener noreferrer\">DBI</a>のビルドとインストールが長くてちょっとビビる</li>\n</ul>\n</li>\n<li>無事インストール完了。スクリプトも動きました。ありがとうcpanm</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

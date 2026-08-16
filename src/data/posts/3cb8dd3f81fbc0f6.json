@@ -1,0 +1,14 @@
+{
+  "title": "Perl言語プログラミングレッスン[入門編] 第9章",
+  "basename": "2014/01/26/100108",
+  "status": "Publish",
+  "publishedAt": "2014-01-26T01:01:08.000Z",
+  "categories": [],
+  "oldPath": "/entry/2014/01/26/100108",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2014/01/26/100108",
+  "html": "<h3>コンテキスト</h3>\n\n<ul>\n<li>何となく、文脈の流れで動きをかえるもの、くらいの認識だった</li>\n<li>printは後ろにリストコンテキストをとる\n\n<ul>\n<li>だから、文字列連結のときには<code>.</code>よりも<code>,</code>の方が好ましいのか。</li>\n</ul>\n</li>\n<li>文字列から数字だけ抜き出す</li>\n</ul>\n\n\n<pre class=\"code lang-perl\" data-lang=\"perl\" data-unlink><span class=\"synStatement\">my</span> <span class=\"synIdentifier\">$line</span> = <span class=\"synConstant\">'12:34 , 56 and 78 , 90'</span>;\n<span class=\"synStatement\">foreach</span> (<span class=\"synIdentifier\">$line</span> =~ <span class=\"synStatement\">/</span><span class=\"synSpecial\">\\d+</span><span class=\"synStatement\">/g</span> ){\n    <span class=\"synStatement\">print</span> <span class=\"synIdentifier\">$_</span>,<span class=\"synConstant\">\"</span><span class=\"synSpecial\">\\n</span><span class=\"synConstant\">\"</span>;\n}\n</pre>\n\n\n<ul>\n<li>パターンマッチ修飾子gをつけることで、同じ文字列の中の数字を複数拾う・・・リストコンテキストで評価される</li>\n<li>foreachはカッコの中をリストコンテキストで評価するが、whileのカッコは<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%B9%A5%AB%A5%E9%A1%BC\" rel=\"noopener noreferrer\">スカラー</a>として評価する\n\n<ul>\n<li>あぁ、俺がwhileで無限ループばっかり作ったのはこの辺り全く理解してなかったからだ。\n\n<ul>\n<li>やっとわかった。</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n\n\n<h3>コンテキスト</h3>\n\n<ul>\n<li>奥が深すぎて遭難しそう</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Perl から Slack の incoming-webhook 宛にメッセージを飛ばす",
+  "basename": "2020/09/05/132615",
+  "status": "Publish",
+  "publishedAt": "2020-09-05T04:26:15.000Z",
+  "categories": [],
+  "oldPath": "/entry/2020/09/05/132615",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2020/09/05/132615",
+  "html": "<p>あっさりできてしまった。</p>\n\n<pre class=\"code lang-perl\" data-lang=\"perl\" data-unlink><span class=\"synPreProc\">#!/usr/bin/env perl</span>\n<span class=\"synStatement\">use strict</span>;\n<span class=\"synStatement\">use warnings</span>;\n\n<span class=\"synStatement\">use </span>URI;\n<span class=\"synStatement\">use </span>HTTP::Tiny;\n<span class=\"synStatement\">use </span>JSON <span class=\"synConstant\">qw/encode_json/</span>;\n\n<span class=\"synStatement\">my</span> <span class=\"synIdentifier\">$url</span> = URI-&gt;new(<span class=\"synConstant\">'slackのincoming-webhookのURL'</span>);\n\n<span class=\"synStatement\">my</span> <span class=\"synIdentifier\">$ht</span> = HTTP::Tiny-&gt;new;\n\n<span class=\"synComment\"># リクエストに必要なHTTPヘッダーを組み立て</span>\n<span class=\"synStatement\">my</span> <span class=\"synIdentifier\">$header</span> = {\n    <span class=\"synConstant\">headers</span> =&gt; {\n        <span class=\"synConstant\">'Content-Type'</span>  =&gt; <span class=\"synConstant\">'application/json; charset=utf-8'</span>,\n    },\n    <span class=\"synConstant\">content</span> =&gt; encode_json {\n            <span class=\"synConstant\">text</span> =&gt; <span class=\"synConstant\">\"test text\"</span>,\n    },\n};\n\n<span class=\"synStatement\">my</span> <span class=\"synIdentifier\">$response</span> = <span class=\"synIdentifier\">$ht-&gt;request</span>( <span class=\"synConstant\">'POST'</span>, <span class=\"synIdentifier\">$url</span>, <span class=\"synIdentifier\">$header</span> );\n\n<span class=\"synStatement\">print</span> <span class=\"synConstant\">\"</span><span class=\"synIdentifier\">$response-&gt;{</span><span class=\"synConstant\">status</span><span class=\"synIdentifier\">}</span><span class=\"synConstant\"> </span><span class=\"synIdentifier\">$response-&gt;{</span><span class=\"synConstant\">reason</span><span class=\"synIdentifier\">}</span><span class=\"synSpecial\">\\n</span><span class=\"synConstant\">\"</span>;\n</pre>\n\n\n<p><span><img src=\"/images/migrated/86ad24096c9808c3.png\" alt=\"f:id:sironekotoro:20200905132303p:plain\" title=\"f:id:sironekotoro:20200905132303p:plain\" class=\"hatena-fotolife\" loading=\"lazy\" /></span></p>\n\n-----",
+  "imageUrls": [
+    "https://cdn-ak.f.st-hatena.com/images/fotolife/s/sironekotoro/20200905/20200905132303.png"
+  ],
+  "features": [
+    "code"
+  ]
+}

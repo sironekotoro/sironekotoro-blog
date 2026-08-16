@@ -1,0 +1,21 @@
+{
+  "title": "Parallels 26上のWindows 11で、左右の⌘キーを使って日本語/英語を切り替える方法（USキーボード）",
+  "basename": "2026/04/20/000706",
+  "status": "Publish",
+  "publishedAt": "2026-04-19T15:07:06.000Z",
+  "categories": [],
+  "oldPath": "/entry/2026/04/20/000706",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2026/04/20/000706",
+  "html": "<p>Parallels 26上のWindows 11でも、IME設定とPowerToysを使えば、左右の⌘キーをMacのように日本語/英語切り替えへ割り当てられます。</p>\n\n<p>こんな環境です。</p>\n\n<ul>\n<li><p>MacBook Air 2025</p>\n\n<ul>\n<li>Keyboard は US</li>\n<li>日本語 - 英語の切り替えは「<a href=\"https://ei-kana.appspot.com/\" rel=\"noopener noreferrer\">⌘英かな</a>」というツールを利用</li>\n</ul>\n</li>\n<li><p>Parallels 26 で Windows 11 を起動。</p></li>\n</ul>\n\n\n<p>で、Macと同じように、左右の⌘キーで日本語 - 英語を切り替えたい・・・</p>\n\n<p>という話です。</p>\n\n<p>かつて、同じような記事を書きました。このエントリの一番下。</p>\n\n<p><iframe title=\"Mac に Parallels で Windows10 を入れ、その上で VPN 接続して弥生会計を使いたい！ - sironekotoroの日記\" class=\"embed-card embed-blogcard\" loading=\"lazy\" sandbox=\"allow-scripts allow-same-origin allow-popups\" referrerpolicy=\"no-referrer\"></iframe><cite class=\"hatena-citation\"><a href=\"/entry/2020/04/29/142300\">sironekotoro.hateblo.jp</a></cite></p>\n\n<p>それの2026年版です。</p>\n\n<h2 id=\"Mac側\">Mac側</h2>\n\n<ul>\n<li>⌘英かな</li>\n<li><span><img src=\"/images/migrated/4a378856f341ddb9.png\" width=\"1002\" height=\"652\" loading=\"lazy\" class=\"hatena-fotolife\" /></span></li>\n</ul>\n\n\n<h2 id=\"Windows側\">Windows側</h2>\n\n<ul>\n<li><p>スタートメニュー → 設定 → 時刻と言語 → 言語と地域 → 日本語 → 言語のオプション → キーボード</p>\n\n<ul>\n<li>レイアウトを「英語キー（101/102 キー）</li>\n<li><p><span><img src=\"/images/migrated/6408572706af7e28.png\" width=\"1200\" height=\"934\" loading=\"lazy\" class=\"hatena-fotolife\" /></span></p></li>\n<li><p>Microsoft IME → キーボードオプション → キーとタッチのカスタマイズ</p>\n\n<ul>\n<li>無変換キー：IME-オフ</li>\n<li>変換キー：IME-オン</li>\n<li><span><img src=\"/images/migrated/d4b117f3b2ffd5e7.png\" width=\"1200\" height=\"934\" loading=\"lazy\" class=\"hatena-fotolife\" /></span></li>\n</ul>\n</li>\n</ul>\n</li>\n<li><p><a href=\"https://github.com/microsoft/PowerToys\" rel=\"noopener noreferrer\">PowerToys</a></p>\n\n<ul>\n<li>PowerToys の Keyboard Manager で、左⌘/右⌘ を Windows側の IMEオン・オフに振り替えます。</li>\n<li>入出力 → Keybord Manager キーの再マップ で、左の⌘キーに IME/ Off を、右の⌘キーに IME/ On</li>\n<li><span><img src=\"/images/migrated/d2bd51254ef16a3b.png\" width=\"1200\" height=\"812\" loading=\"lazy\" class=\"hatena-fotolife\" /></span></li>\n</ul>\n</li>\n</ul>\n\n\n-----",
+  "imageUrls": [
+    "https://cdn-ak.f.st-hatena.com/images/fotolife/s/sironekotoro/20260419/20260419232242.png",
+    "https://cdn-ak.f.st-hatena.com/images/fotolife/s/sironekotoro/20260419/20260419232047.png",
+    "https://cdn-ak.f.st-hatena.com/images/fotolife/s/sironekotoro/20260419/20260419232012.png",
+    "https://cdn-ak.f.st-hatena.com/images/fotolife/s/sironekotoro/20260419/20260419232125.png"
+  ],
+  "features": [
+    "images",
+    "blog-card",
+    "internal-link"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "続・SSD を換装した MacBook Air (13-inch, Mid 2013) で panic(cpu 0 caller 0xffffff8002ac2838)",
+  "basename": "2022/02/14/120000",
+  "status": "Publish",
+  "publishedAt": "2022-02-14T03:00:00.000Z",
+  "categories": [],
+  "oldPath": "/entry/2022/02/14/120000",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2022/02/14/120000",
+  "html": "<h2>あの負け戦から半年ちょっと</h2>\n\n<p><iframe title=\"（追記あり）SSD を換装した MacBook Air (13-inch, Mid 2013) で panic(cpu 0 caller 0xffffff8002ac2838) - sironekotoroの日記\" class=\"embed-card embed-blogcard\" loading=\"lazy\" sandbox=\"allow-scripts allow-same-origin allow-popups\" referrerpolicy=\"no-referrer\"></iframe><cite class=\"hatena-citation\"><a href=\"/entry/2021/06/06/114827\">sironekotoro.hateblo.jp</a></cite></p>\n\n<h2>2022年1月26日、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/MacOS\" rel=\"noopener noreferrer\">MacOS</a> Big Sur 11.6.3 登場</h2>\n\n<p><iframe title=\"macOS Big Sur のアップデートの新機能\" class=\"embed-card embed-webcard\" loading=\"lazy\" sandbox=\"allow-scripts allow-same-origin allow-popups\" referrerpolicy=\"no-referrer\"></iframe><cite class=\"hatena-citation\"><a href=\"https://support.apple.com/ja-jp/HT211896\" rel=\"noopener noreferrer\">support.apple.com</a></cite></p>\n\n<p>もしかしたら、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/SSD\" rel=\"noopener noreferrer\">SSD</a> 換装に関わるトラブルも解決しているのでは・・・？</p>\n\n<p>と思って再換装。</p>\n\n<p>数回の意図しない再起動の後、なんとか Big Sur 11.6.3 をインストールすることができました。</p>\n\n<p>それから3日ほど経ちましたが、安定しているようです。</p>\n\n<p>もうしばらく、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Parallels\" rel=\"noopener noreferrer\">Parallels</a> で Windows10 起動させっぱにしてみたり、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A1%BC%A5%F3%A5%BB%A1%BC%A5%D0%A1%BC\" rel=\"noopener noreferrer\">スクリーンセーバー</a>動かしっぱなしにして様子を見てみます。</p>\n\n<p>・・・とはいえ、もう 2013 年モデルの出る幕はないのでは？とか、会社から支給されている <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/MacBook%20Pro\" rel=\"noopener noreferrer\">MacBook Pro</a> 2017 で十分ではあるのですが、愛着があるんですよね。</p>\n\n<p><span><img src=\"/images/migrated/c80a9038b2c6b7f9.png\" alt=\"f:id:sironekotoro:20220212032928p:plain\" width=\"698\" height=\"463\" loading=\"lazy\" class=\"hatena-fotolife\" /></span></p>\n\n<p><span><img src=\"/images/migrated/8328d9e4e450d3aa.png\" alt=\"f:id:sironekotoro:20220212032958p:plain\" width=\"698\" height=\"460\" loading=\"lazy\" class=\"hatena-fotolife\" /></span></p>\n\n<p><span><img src=\"/images/migrated/91cc9d06facd5912.png\" alt=\"f:id:sironekotoro:20220212033007p:plain\" width=\"780\" height=\"622\" loading=\"lazy\" class=\"hatena-fotolife\" /></span></p>\n\n<p><span><img src=\"/images/migrated/874e28ee66005ce7.png\" alt=\"f:id:sironekotoro:20220212033059p:plain\" width=\"780\" height=\"622\" loading=\"lazy\" class=\"hatena-fotolife\" /></span></p>\n\n<p><span><img src=\"/images/migrated/984d6e6085d82a98.png\" alt=\"f:id:sironekotoro:20220212033107p:plain\" width=\"780\" height=\"622\" loading=\"lazy\" class=\"hatena-fotolife\" /></span></p>\n\n-----",
+  "imageUrls": [
+    "https://cdn-ak.f.st-hatena.com/images/fotolife/s/sironekotoro/20220212/20220212032928.png",
+    "https://cdn-ak.f.st-hatena.com/images/fotolife/s/sironekotoro/20220212/20220212032958.png",
+    "https://cdn-ak.f.st-hatena.com/images/fotolife/s/sironekotoro/20220212/20220212033007.png",
+    "https://cdn-ak.f.st-hatena.com/images/fotolife/s/sironekotoro/20220212/20220212033059.png",
+    "https://cdn-ak.f.st-hatena.com/images/fotolife/s/sironekotoro/20220212/20220212033107.png"
+  ],
+  "features": [
+    "images",
+    "blog-card",
+    "internal-link"
+  ]
+}

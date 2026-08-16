@@ -1,0 +1,14 @@
+{
+  "title": "Perl入学式 #2 復習問題",
+  "basename": "2013/09/23/205823",
+  "status": "Publish",
+  "publishedAt": "2013-09-23T11:58:23.000Z",
+  "categories": [
+    "Perl入学式"
+  ],
+  "oldPath": "/entry/2013/09/23/205823",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2013/09/23/205823",
+  "html": "<blockquote><p>端末から文字を入力し, その文字を表示するstdin.plを作成しよう\n  おまじない\n  標準入力 -&gt; STDIN</p></blockquote>\n\n<p><a href=\"http://codepad.org/vJRdJqlm\" rel=\"noopener noreferrer\">自分の答案</a></p>\n\n<blockquote><p>1から100までの値を配列に格納し, その配列の全ての数値を足した結果を出力するsum.plを作成しよう\n  配列\n  for</p></blockquote>\n\n<p><a href=\"http://codepad.org/BHwz6hfY\" rel=\"noopener noreferrer\">自分の答案</a></p>\n\n<blockquote><p>標準入力により数値を一つ読み込み, その数値を階乗した値を出力するfactorial.plを作成しよう\n  標準入力 -&gt; STDIN\n  配列\n  for</p></blockquote>\n\n<p><a href=\"http://codepad.org/nPHQX655\" rel=\"noopener noreferrer\">自分の答案</a></p>\n\n<blockquote><p>標準入力により数値を一つ読み込み, その数値が偶数なら\"even\", 奇数なら\"odd\" という文字を出力するeven_or_odd.plを作成しよう\n 標準入力 -&gt; STDIN\n if, else</p></blockquote>\n\n<p><a href=\"http://codepad.org/sQORuU8S\" rel=\"noopener noreferrer\">自分の答案</a></p>\n\n-----",
+  "imageUrls": [],
+  "features": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Excel VBA ベーシック 公式テキスト 11章  マクロの実行 ＆ その他",
+  "basename": "2014/04/27/154839",
+  "status": "Publish",
+  "publishedAt": "2014-04-27T06:48:39.000Z",
+  "categories": [],
+  "oldPath": "/entry/2014/04/27/154839",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2014/04/27/154839",
+  "html": "<h1>11-1 VBEから実行する</h1>\n\n<h1>11-2 [マクロ]ダイアログボックス</h1>\n\n<h1>11-3 シート上にボタンを設置する</h1>\n\n<ul>\n<li>シート上にボタンなどの「フォームコントロール」を設置し、それにマクロの実行を結びつける</li>\n</ul>\n\n\n<h1>11-4 メニュー/<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%C4%A1%BC%A5%EB%A5%D0%A1%BC\" rel=\"noopener noreferrer\">ツールバー</a>に登録する(Excel2003)</h1>\n\n<h1>11-5 クイックアクセス<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%C4%A1%BC%A5%EB%A5%D0%A1%BC\" rel=\"noopener noreferrer\">ツールバー</a>に登録する(Excel2007)</h1>\n\n<ul>\n<li>Excel2007 使って長いけど、「クイックアクセス<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%C4%A1%BC%A5%EB%A5%D0%A1%BC\" rel=\"noopener noreferrer\">ツールバー</a>」なんて機能知らなかったわ。</li>\n</ul>\n\n\n<h1>これで<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Excel\" rel=\"noopener noreferrer\">Excel</a> <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/VBA\" rel=\"noopener noreferrer\">VBA</a> ベーシック 公式テキストの練習問題</h1>\n\n<ul>\n<li>練習問題のダウンロードページから模擬問題ダウンロード。</li>\n<li>練習問題は４０問５０分が２セット\n\n<ul>\n<li>練習問題１つ目：正答率８５％</li>\n<li>練習問題２つ目：正答率８２％</li>\n</ul>\n</li>\n<li>テスト受けなくても良いかなぁ・・・\n\n<ul>\n<li>テスト１２０００円＋税で高いんだよな・・・</li>\n</ul>\n</li>\n</ul>\n\n\n<h1>そもそも</h1>\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Excel\" rel=\"noopener noreferrer\">Excel</a> <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/VBA\" rel=\"noopener noreferrer\">VBA</a>は先人がおいていったマクロを解読する為だった。</li>\n<li>時は今！</li>\n<li>早速、ステップ実行使いながら読み進む。\n\n<ul>\n<li><code>m(dce) = Month(DateSerial(1998, 12, 31) + dce)</code></li>\n<li>！？</li>\n<li>配列！しかも二次元配列もある！！</li>\n<li>ベーシックの範囲で出ていない！</li>\n<li>でも、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>（つか、プログラミングの汎用的な知識）でやってたから何となく感じは掴める！</li>\n</ul>\n</li>\n<li>最初は分けわかんなかったけど、だいぶ読めるような気がしてきた。勉強してよかった〜</li>\n<li>試験受ける前に、このマクロの解読を進める事にする。\n\n<ul>\n<li>そこで満足したらそこまでだけど、とりあえず次のレベル（スタンダード）には進んでみたい\n\n<ul>\n<li>なんせ、今は「何を知らないか、知らない」状態なので。</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

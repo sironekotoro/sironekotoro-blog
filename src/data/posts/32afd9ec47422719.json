@@ -1,0 +1,14 @@
+{
+  "title": "業務に役立つPerl 第4章 多次元データ構造を自由に扱おう",
+  "basename": "2015/11/03/131016",
+  "status": "Publish",
+  "publishedAt": "2015-11-03T04:10:16.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/11/03/131016",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/11/03/131016",
+  "html": "<h1>多次元データ構造</h1>\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>最初の難関といわれるリファレンスと無名配列・無名ハッシュ</li>\n<li>当初は「そんなん使わんでも何とかなるだろ」とか思ってたけど、「配列の中に配列を入れられない」「ハッシュの中に配列を入れられない」などの制限がでてくるに及び、軍門に下った。\n\n<ul>\n<li>リファレンスを使わないで無理矢理組んでいた頃の自作プログラムを見ると、それはそれで貴重な気もする</li>\n<li>今の自分にはもう出来ない</li>\n</ul>\n</li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>入学式の@papix校長曰く、「ひたすらやるしかない、やってれば分かる」\n\n<ul>\n<li>ほんとうにそうだった。ここだけは体育会系的にやるしかないなーという実感。</li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>入学式の練習問題でひたすら叩き込んだ。</li>\n</ul>\n</li>\n<li><p>あとは、自分の身近な事をデータ構造に直してみるとか</p>\n\n<ul>\n<li>$東京都 = [ {name =&gt; <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%C9%CA%C0%EE%B6%E8\" rel=\"noopener noreferrer\">品川区</a>,population =&gt; 370000} , {name =&gt; 渋谷区 , population =&gt; 200000}, ... ]</li>\n</ul>\n</li>\n<li><p>あと、YAPCAsia 2015のこれ。いきなりCの話が始まってびっくりしたけど、その後にちゃんと<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>でてくる。</p></li>\n</ul>\n\n\n\n\n\n<ul>\n<li><p>「変数は箱じゃない！」凄い分かりやすかった。</p></li>\n<li><p>という状態でこの第4章をみてると、「うむ、わかる」となるけど、全くの初心者だった頃にこれを見ても挫折するだろうな、って思う。</p>\n\n<ul>\n<li>ほんと取っ付きにくいよなー</li>\n</ul>\n</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

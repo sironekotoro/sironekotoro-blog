@@ -1,0 +1,14 @@
+{
+  "title": "はじめてのPerl 第６版 第１７章 上級テクニック",
+  "basename": "2015/05/24/114146",
+  "status": "Publish",
+  "publishedAt": "2015-05-24T02:41:46.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/05/24/114146",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/05/24/114146",
+  "html": "<h1>リストスライス</h1>\n\n<ul>\n<li>随分<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>にならされたのか、見てパッと「あぁ、こういうことだな」ってのが分かるようになった</li>\n</ul>\n\n\n<h1>ハッシュスライス</h1>\n\n<blockquote><p>スライスは必ずリストになるので、ハッシュスライスの記法では、それを示すために先頭にアットマークを付けます</p></blockquote>\n\n<h1>Try::Tiny</h1>\n\n<ul>\n<li>こんな便利なものが・・・</li>\n<li>tryブロックとcatchブロックの間に;入れるとエラーになるよ</li>\n</ul>\n\n\n<h1>List::Util , List::MoreUtils</h1>\n\n<ul>\n<li>便利すぎて、今まで自分でサブルーチン作ったりやってきた事が簡単にできそうで泣く</li>\n<li>泣きはしないが、なるほど車輪の再発名ってこういう事なんかな</li>\n<li>無駄とは思わんが・・・</li>\n</ul>\n\n\n<blockquote><p>List::MoreUtilsモジュールには、便利で興味深いサブルーチンがまだまだたくさんあります。このモジュールが実現している機能を再実装するのを避けるために、ドキュメントをチェックするようにしましょう。</p></blockquote>\n\n<ul>\n<li>はい</li>\n</ul>\n\n\n<h1>読了</h1>\n\n<ul>\n<li>最初の“<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Hello%20World\" rel=\"noopener noreferrer\">Hello World</a>”をかいたのが2014年11月16日</li>\n<li>その当時でも「それなり」に動く<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8\" rel=\"noopener noreferrer\">スクリプト</a>は書けていたし、他の<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>初心者本も読んではいた</li>\n<li>けどまぁ、避けて通るわけにはいかない、という半ば脅迫観念の元に取り組んだのがこの「はじめての<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>」だった</li>\n<li>他の初心者本で扱っている事、扱っていない事、いろいろあった</li>\n<li>近年の「モダン<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>」に追いつこうという焦り、自分の<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8\" rel=\"noopener noreferrer\">スクリプト</a>を書きたい、という欲求もあったけど、基礎は必要と言い聞かせながらやってきた。\n\n<ul>\n<li>妥協案として、週末の土曜日を勉強に、日曜日を自作<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8\" rel=\"noopener noreferrer\">スクリプト</a>に、と分けた。</li>\n</ul>\n</li>\n<li>なんだかんだで、章末の練習問題には考えさせられた。\n\n<ul>\n<li>自分のやり方・考え方が泥臭くて悲しくもなったけど・・・</li>\n</ul>\n</li>\n<li>でも、「はじめての<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>」を読み終えられて良かった。\n\n<ul>\n<li>サブルーチンに対する意味不明の恐怖感・抵抗感がなくなった</li>\n</ul>\n</li>\n<li>いまは読了した充実感があるけど、早く続きをやりたいという気持ち。</li>\n<li>という訳で、次回からは「続・はじめての<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>」に着手。</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

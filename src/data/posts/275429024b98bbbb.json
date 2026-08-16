@@ -1,0 +1,12 @@
+{
+  "title": "環境整備",
+  "basename": "2013/09/23/133341",
+  "status": "Publish",
+  "publishedAt": "2013-09-23T04:33:41.000Z",
+  "categories": [],
+  "oldPath": "/entry/2013/09/23/133341",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2013/09/23/133341",
+  "html": "<p><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/YAPC\" rel=\"noopener noreferrer\">YAPC</a>::2013で「blogやるならhatenaで！」と言われたので。</p>\n\n<ul>\n<li><p>マークダウン記法に設定。\nやはりhatena記法はめんどいです。</p>\n\n<p><a href=\"http://staff.hatenablog.com/entry/2012/09/19/153219\" rel=\"noopener noreferrer\">Markdown記法に対応しました</a></p></li>\n<li><p>codepadでコードをさらす。</p>\n\n<p><a href=\"http://codepad.org/ptHEplCU\" rel=\"noopener noreferrer\">fizzbuzz</a></p></li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": []
+}

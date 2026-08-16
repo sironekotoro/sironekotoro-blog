@@ -1,0 +1,12 @@
+{
+  "title": "OAuth::LiteがCentOS5-64bitにインストールできない",
+  "basename": "2014/02/02/101225",
+  "status": "Publish",
+  "publishedAt": "2014-02-02T01:12:25.000Z",
+  "categories": [],
+  "oldPath": "/entry/2014/02/02/101225",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2014/02/02/101225",
+  "html": "<h3>むう</h3>\n\n<ul>\n<li>OAuth::Liteを入れて、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Tumblr\" rel=\"noopener noreferrer\">Tumblr</a>にポストしたい！と思うも、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/VPS\" rel=\"noopener noreferrer\">VPS</a>の方で\n<code>Building and testing Crypt-OpenSSL-Random-0.04 ... FAIL</code></li>\n<li>エラーログ見ると、こんなのが延々。<code>/usr/local/include/sys/types.h: 許可がありません</code></li>\n<li>そこにインストールするところから始めるのかぁ、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Mac\" rel=\"noopener noreferrer\">Mac</a>の方はふつうにインストールできたのになぁ。</li>\n<li>いまいち解決策わからないんで、基礎の勉強に戻るとする。</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": []
+}

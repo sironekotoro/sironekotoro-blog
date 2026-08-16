@@ -1,0 +1,16 @@
+{
+  "title": "初めてのDevel::NYTProf",
+  "basename": "2013/11/30/114913",
+  "status": "Publish",
+  "publishedAt": "2013-11-30T02:49:13.000Z",
+  "categories": [],
+  "oldPath": "/entry/2013/11/30/114913",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2013/11/30/114913",
+  "html": "<h3>かっこいい</h3>\n\n<ul>\n<li>昨日のPerlBeginneersで見てカッコ良さげだったので！</li>\n<li><code>cpanm --sudo Devel::NYTProf</code>でインストール</li>\n<li><code>perl -d:NYTProf target.pl</code>でファイル吐き出し\n\n<ul>\n<li>このとき、ターミナルのカレントフォルダに吐き出されるので注意\n\n<ul>\n<li>いやまぁ、あたりまえか</li>\n</ul>\n</li>\n</ul>\n</li>\n<li><code>nytprofhtml</code>で吐き出されたファイルをhtml化・・・そんなコマンド無いよ！と叱られる。\n\n<ul>\n<li><code>perl /Users/username/.plenv/versions/5.16.3/bin/nytprofhtml Targetfile</code>でなんとか吐き出してもらう。</li>\n<li>きた！ちなみに、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/fizzbuzz\" rel=\"noopener noreferrer\">fizzbuzz</a>を1〜100000までやったスクリプトです。</li>\n</ul>\n</li>\n</ul>\n\n\n<p><span><img src=\"/images/migrated/cc5a5d006f3300d4.png\" alt=\"f:id:sironekotoro:20131130112330p:plain\" title=\"f:id:sironekotoro:20131130112330p:plain\" class=\"hatena-fotolife\" loading=\"lazy\" /></span></p>\n\n\n-----",
+  "imageUrls": [
+    "http://cdn-ak.f.st-hatena.com/images/fotolife/s/sironekotoro/20131130/20131130112330.png"
+  ],
+  "features": [
+    "code"
+  ]
+}

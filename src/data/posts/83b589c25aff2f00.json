@@ -1,0 +1,12 @@
+{
+  "title": "Excel VBA ベーシック 公式テキスト １章〜３章",
+  "basename": "2014/03/21/145914",
+  "status": "Publish",
+  "publishedAt": "2014-03-21T05:59:14.000Z",
+  "categories": [],
+  "oldPath": "/entry/2014/03/21/145914",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2014/03/21/145914",
+  "html": "<h1>マクロと<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/VBA\" rel=\"noopener noreferrer\">VBA</a></h1>\n\n<ul>\n<li>マクロ：実際に行った操作を記録して、そのまま繰り返し実行できる機能</li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/VBA\" rel=\"noopener noreferrer\">VBA</a>：マクロを記述するために使う<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%D7%A5%ED%A5%B0%A5%E9%A5%DF%A5%F3%A5%B0%B8%C0%B8%EC\" rel=\"noopener noreferrer\">プログラミング言語</a></li>\n</ul>\n\n\n<h2><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/VBA\" rel=\"noopener noreferrer\">VBA</a>の特徴</h2>\n\n<ul>\n<li>イベント駆動型言語</li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%AA%A5%D6%A5%B8%A5%A7%A5%AF%A5%C8%BB%D8%B8%FE\" rel=\"noopener noreferrer\">オブジェクト指向</a>方言語\n\n<ul>\n<li>プロバティ：オブジェクトの様子を変更する</li>\n<li>メソッド：オブジェクトに○○させる</li>\n</ul>\n</li>\n</ul>\n\n\n<h2>モジュールとプロシージャ</h2>\n\n<ul>\n<li>モジュール：マクロを記述するエリア</li>\n<li>プロシージャ：マクロの最少実行単位\n\n<ul>\n<li>Subプロシージャ：値を返さない\n\n<ul>\n<li>Call：Subプロシージャ内から別のSubプロシージャを実行する際に利用。</li>\n</ul>\n</li>\n<li>Functionプロシージャ：値を返す</li>\n<li>Propertyプロシージャ：クラスモジュール内で利用</li>\n</ul>\n</li>\n</ul>\n\n\n<h2>コメント</h2>\n\n<ul>\n<li><code>’</code>か<code>REM</code>に続けて記述する</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": []
+}

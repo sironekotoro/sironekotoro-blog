@@ -1,0 +1,14 @@
+{
+  "title": "FC2 ブログに記事を投稿する Perl モジュール作った",
+  "basename": "2021/02/07/160415",
+  "status": "Publish",
+  "publishedAt": "2021-02-07T07:04:15.000Z",
+  "categories": [],
+  "oldPath": "/entry/2021/02/07/160415",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2021/02/07/160415",
+  "html": "<p>はい。タイトルのまんまです。</p>\n\n<p><iframe title=\"sironekotoro/WebService-FC2-Blog\" class=\"embed-card embed-webcard\" loading=\"lazy\" sandbox=\"allow-scripts allow-same-origin allow-popups\" referrerpolicy=\"no-referrer\"></iframe><cite class=\"hatena-citation\"><a href=\"https://github.com/sironekotoro/WebService-FC2-Blog\" rel=\"noopener noreferrer\">github.com</a></cite></p>\n\n<p>元々は、ちょっと表に出せないような欲望から始まったんですが、その途中でブログに投稿できるモジュールが欲しいなー、ということになり、気づいてみると欲望置き去りにして完成してたのがこのモジュールです。</p>\n\n<p>目的と手段がよくすり変わるという自覚はあります。</p>\n\n<p>手段たーのしー！</p>\n\n<p>今回は目的別にモジュール分けるってのをやってみました。こんなんです。</p>\n\n<pre class=\"code bash\" data-lang=\"bash\" data-unlink>$ tree lib/WebService/FC2\nlib/WebService/FC2\n├── Blog\n│   ├── Delete.pm\n│   ├── Edit.pm\n│   ├── Get.pm\n│   ├── Media.pm\n│   └── New.pm\n└── Blog.pm</pre>\n\n\n<p>問題は全然テスト書いてないことです。</p>\n\n<p>このモジュールは <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/XML-RPC\" rel=\"noopener noreferrer\">XML-RPC</a> を使って各種の操作を行うのですが、その <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/XML-RPC\" rel=\"noopener noreferrer\">XML-RPC</a> のモック？を用意しなきゃいけない？の？</p>\n\n<p>ってところで時間切れというか気力がつきました。</p>\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "blog-card"
+  ]
+}

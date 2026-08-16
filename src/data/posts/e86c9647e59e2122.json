@@ -1,0 +1,12 @@
+{
+  "title": "Net::PingとNet::Ping::Externalがインストールできなくてびっくりした（MacOSX 10.8）",
+  "basename": "2013/11/24/100517",
+  "status": "Publish",
+  "publishedAt": "2013-11-24T01:05:17.000Z",
+  "categories": [],
+  "oldPath": "/entry/2013/11/24/100517",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2013/11/24/100517",
+  "html": "<h3>原因は<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/MacOSX\" rel=\"noopener noreferrer\">MacOSX</a>のファイアウォールを有効にしていたから</h3>\n\n<ul>\n<li>Net::PingとNet::Ping::Externalがインストールできなくてびっくりする\n\n<ul>\n<li>前日にOnyXでアクセス権の修正とかやってたからそいつが原因だろうか？とガクブルする。</li>\n</ul>\n</li>\n<li>cpanmのエラーログみて、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/127.0.0.1\" rel=\"noopener noreferrer\">127.0.0.1</a>へのpingが失敗しているのを見てびっくりする。</li>\n<li>まさかそんな馬鹿な、とコンソールから<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/127.0.0.1\" rel=\"noopener noreferrer\">127.0.0.1</a>へのpingを打って失敗して唖然とする</li>\n<li>ネットワーク疎通NGにはウィルス対策ソフトとファイアウォールを無効にしてチェックの原則を試す</li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/MacOS\" rel=\"noopener noreferrer\">MacOS</a>標準のファイアウォールの設定を無効にしたら解決した。なんでや。</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": []
+}

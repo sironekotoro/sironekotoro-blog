@@ -1,0 +1,14 @@
+{
+  "title": "はじめてのPerl 第６版 第１３章 ディレクトリ操作",
+  "basename": "2015/04/25/155454",
+  "status": "Publish",
+  "publishedAt": "2015-04-25T06:54:54.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/04/25/155454",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/04/25/155454",
+  "html": "<h1>globを理解</h1>\n\n<ul>\n<li>いままで、いまいちよく分からなかったglob</li>\n<li>でも、シェルのglobを解説しつつ<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>のglobを解説してくれたので、やっと理解できた\n\n<ul>\n<li>なるほどこれは便利だ！（今更</li>\n</ul>\n</li>\n</ul>\n\n\n<h1><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/unix\" rel=\"noopener noreferrer\">unix</a>の話題</h1>\n\n<ul>\n<li>普段の仕事のベースが<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Windows\" rel=\"noopener noreferrer\">Windows</a>マシンなんで、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%B7%A5%F3%A5%DC%A5%EA%A5%C3%A5%AF%A5%EA%A5%F3%A5%AF\" rel=\"noopener noreferrer\">シンボリックリンク</a>になじみが無い。</li>\n<li>どういうもんかは分かっているつもりなんだけど・・・</li>\n<li>でも、練習問題で<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%B7%A5%F3%A5%DC%A5%EA%A5%C3%A5%AF%A5%EA%A5%F3%A5%AF\" rel=\"noopener noreferrer\">シンボリックリンク</a>作ったり消したり<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%BB%B2%BE%C8%B8%B5\" rel=\"noopener noreferrer\">参照元</a>いじったりして遊んだんで、だいぶ理解が進んだ気がする。</li>\n<li>ただ、これを自作プログラムでどう生かすか？という所にはまだ至ってない・・・</li>\n<li>そのうち使うタイミングが出てくるんだろうなぁ</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

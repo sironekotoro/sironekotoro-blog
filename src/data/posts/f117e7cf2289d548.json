@@ -1,0 +1,14 @@
+{
+  "title": "かんたんPerl 第11章 正規表現",
+  "basename": "2016/03/05/154234",
+  "status": "Publish",
+  "publishedAt": "2016-03-05T06:42:34.000Z",
+  "categories": [],
+  "oldPath": "/entry/2016/03/05/154234",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2016/03/05/154234",
+  "html": "<h1>おなじみ<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%C0%B5%B5%AC%C9%BD%B8%BD\" rel=\"noopener noreferrer\">正規表現</a></h1>\n\n<ul>\n<li>とはいえ、全くしらなかったのがこれ</li>\n</ul>\n\n\n<pre class=\"code lang-perl\" data-lang=\"perl\" data-unlink><span class=\"synStatement\">use </span><span class=\"synConstant\">5.012</span>;\n<span class=\"synStatement\">use warnings</span>;\n<span class=\"synStatement\">use utf8</span>;\n<span class=\"synStatement\">binmode</span> <span class=\"synIdentifier\">STDOUT</span>, <span class=\"synConstant\">':encoding(UTF-8)'</span>;\n\n<span class=\"synStatement\">while</span>(<span class=\"synIdentifier\">&lt;DATA&gt;</span>){\n    <span class=\"synStatement\">chomp</span>;\n    <span class=\"synStatement\">say</span> <span class=\"synIdentifier\">$_</span> <span class=\"synStatement\">if</span> <span class=\"synStatement\">/</span><span class=\"synSpecial\">\\d</span><span class=\"synStatement\">/</span>;\n}\n\n<span class=\"synComment\">__DATA__</span>\n<span class=\"synComment\">1</span>\n<span class=\"synComment\">2</span>\n<span class=\"synComment\">3</span>\n<span class=\"synComment\">０  #全角のゼロ</span>\n</pre>\n\n\n<ul>\n<li>なんと、これ実行すると「０」も表示される。</li>\n<li>まさか、全角の数字まで \\d 文字クラスの数字にマッチするとは・・・</li>\n<li>ただし、 <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/utf-8\" rel=\"noopener noreferrer\">utf-8</a> プラグマ利用時\n\n<ul>\n<li>これは、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Unicode\" rel=\"noopener noreferrer\">Unicode</a>の文字プロパティを使った文字クラスになるため。</li>\n<li><code>/\\d/a</code> とすることで、半角数字にマッチ、とする事が出来る。</li>\n</ul>\n</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

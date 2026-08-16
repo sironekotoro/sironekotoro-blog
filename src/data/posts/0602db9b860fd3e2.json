@@ -1,0 +1,14 @@
+{
+  "title": "Macbook Airの環境整備 20131020",
+  "basename": "2013/11/01/213009",
+  "status": "Publish",
+  "publishedAt": "2013-11-01T12:30:09.000Z",
+  "categories": [],
+  "oldPath": "/entry/2013/11/01/213009",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2013/11/01/213009",
+  "html": "<h1>誘惑に負けてteitoku入れてしまう</h1>\n\n<p><a href=\"http://makebooth.com/i/1xkN1\" rel=\"noopener noreferrer\">艦これ専用ブラウザー Teitoku - geta6 | makebooth</a></p>\n\n<p>五航戦まったく来る気配なし。3-2突破のために駆逐艦隊育成中（主に演習で）</p>\n\n<h1><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/sublime\" rel=\"noopener noreferrer\">sublime</a> text2で矩形選択</h1>\n\n<p>altキー押しながら選択</p>\n\n<h1><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/sublime\" rel=\"noopener noreferrer\">sublime</a> text2で定型文（use strict）とかを一発入力</h1>\n\n<p>snipet機能を使う<br />\n<a href=\"http://stabucky.com/wp/archives/4669\" rel=\"noopener noreferrer\">Sublime Text 2 のスニペット機能を使う | You Look Too Cool</a>\nいつも心にuse strict てことで、useって打ってTABキー押すといつものに２行が挿入されます。</p>\n\n<pre class=\"code lang-perl\" data-lang=\"perl\" data-unlink><span class=\"synIdentifier\">&lt;snippet&gt;</span>\n    <span class=\"synIdentifier\">&lt;content&gt;</span>&lt;![CDATA[\n<span class=\"synStatement\">use strict</span>;\n<span class=\"synStatement\">use warnings</span>;\n\n\n]]&gt;&lt;/content&gt;\n    &lt;!-- Optional: Set a tabTrigger to define how to trigger the snippet --&gt;\n    <span class=\"synIdentifier\">&lt;tabTrigger&gt;</span>use&lt;/tabTrigger&gt;\n    &lt;!-- Optional: Set a scope to limit where the snippet will trigger --&gt;\n    &lt;!-- <span class=\"synIdentifier\">&lt;scope&gt;</span>source.python&lt;/scope&gt; --&gt;\n&lt;/snippet&gt;\n</pre>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "title": "ドットインストール HTML入門（新版）",
+  "basename": "2013/12/01/143043",
+  "status": "Publish",
+  "publishedAt": "2013-12-01T05:30:43.000Z",
+  "categories": [],
+  "oldPath": "/entry/2013/12/01/143043",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2013/12/01/143043",
+  "html": "<p>HTML入門が新しくなってたので、そちらで受講再開。完了。</p>\n\n<h3><a href=\"http://dotinstall.com/lessons/basic_html_v2\" rel=\"noopener noreferrer\">HTML入門 (全16回) - プログラミングならドットインストール</a></h3>\n\n<ul>\n<li>前半はウンウン、と聞いていたけど、後半になると知らないことが。</li>\n<li>リスト系\n\n<ul>\n<li>ul : unorderd list</li>\n<li>ol : orderd list</li>\n<li>li : list item</li>\n</ul>\n</li>\n<li>テーブル系\n\n<ul>\n<li>tr : table row</li>\n<li>th : table header</li>\n<li>td : table data</li>\n</ul>\n</li>\n<li>inputタグが便利になってた</li>\n<li>lavelタグ便利そう</li>\n<li>スタイル指定\n\n<ul>\n<li>divとspan\n\n<ul>\n<li>この辺りから知らないことばかり</li>\n<li>どちらもスタイルを指定する要素</li>\n<li>div : 複数行にスタイルを適用させるとき</li>\n<li>span : 行内でスタイルを適用させるとき</li>\n</ul>\n</li>\n<li>idとclass\n\n<ul>\n<li>id : ユニーク。複数使ってはいけない。</li>\n<li>class : 複数利用可能</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>構造を表すタグ\n\n<ul>\n<li>必要なん？音声読み上げブラウザ用とか？</li>\n<li>検索エンジン用かも</li>\n</ul>\n</li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/javascript\" rel=\"noopener noreferrer\">javascript</a>は<code>&lt;/body&gt;</code>タグの直前に置く</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": []
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Mouseのコンストラクタで1時間ちょっとハマったところ",
+  "basename": "2020/09/13/132206",
+  "status": "Publish",
+  "publishedAt": "2020-09-13T04:22:06.000Z",
+  "categories": [],
+  "oldPath": "/entry/2020/09/13/132206",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2020/09/13/132206",
+  "html": "<p>出オチ感がるんですが、こんなコードです。</p>\n\n<p>Mouse を使った <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> の<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%AA%A5%D6%A5%B8%A5%A7%A5%AF%A5%C8%BB%D8%B8%FE\" rel=\"noopener noreferrer\">オブジェクト指向</a>のコードです。</p>\n\n<p>意図したことは、<code>$obj = UserID-&gt;new()</code> でコンスト<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%E9%A5%AF\" rel=\"noopener noreferrer\">ラク</a>タを呼ぶも、 <code>required =&gt; 1</code> つまりオブジェクト生成時にプロパティを必須にしているのでエラーが出る・・・というものです。</p>\n\n<pre class=\"code lang-perl\" data-lang=\"perl\" data-unlink><span class=\"synPreProc\">#!/usr/bin/env perl</span>\n<span class=\"synStatement\">package</span><span class=\"synType\"> UserID</span> {\n    <span class=\"synStatement\">use </span>Mouse;\n\n    has <span class=\"synConstant\">user_id</span> =&gt; (\n        <span class=\"synConstant\">is</span>  =&gt; <span class=\"synConstant\">\"rw\"</span>,\n        <span class=\"synConstant\">isa</span> =&gt; <span class=\"synConstant\">\"Str\"</span>,\n        <span class=\"synConstant\">default</span>  =&gt; <span class=\"synConstant\">\"\"</span>,\n        <span class=\"synConstant\">required</span> =&gt; <span class=\"synConstant\">1</span>,\n    );\n\n    __PACKAGE__<span class=\"synIdentifier\">-&gt;meta-&gt;make_immutable</span>();\n}\n\n<span class=\"synStatement\">package</span><span class=\"synType\"> main</span>;\n<span class=\"synStatement\">use strict</span>;\n<span class=\"synStatement\">use warnings</span>;\n\n<span class=\"synStatement\">my</span> <span class=\"synIdentifier\">$obj</span> = UserID-&gt;new();\n</pre>\n\n\n<p>が、エラー出ません。</p>\n\n<p><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Google\" rel=\"noopener noreferrer\">Google</a> 翻訳片手にオフィシャルのページ読んでみたりしたのですが、解決せず。</p>\n\n<p><iframe title=\"Mouse - Moose minus the antlers - metacpan.org\" class=\"embed-card embed-webcard\" loading=\"lazy\" sandbox=\"allow-scripts allow-same-origin allow-popups\" referrerpolicy=\"no-referrer\"></iframe><cite class=\"hatena-citation\"><a href=\"https://metacpan.org/pod/Mouse\" rel=\"noopener noreferrer\">metacpan.org</a></cite></p>\n\n<p>で、原因なんですが、ここです。</p>\n\n<pre class=\"code lang-perl\" data-lang=\"perl\" data-unlink>        <span class=\"synConstant\">default</span>  =&gt; <span class=\"synConstant\">\"\"</span>,\n        <span class=\"synConstant\">required</span> =&gt; <span class=\"synConstant\">1</span>,\n</pre>\n\n\n<p>ここで、<code>required =&gt; 1</code> としてオブジェクト生成時にプロパティを要求する・・・のと同時に、 <code>default =&gt; \"\",</code> と、何も指定されなかったときにデフォルト値が入る設定にしていました。</p>\n\n<p>ということで、当初の意図通りオブジェクト生成時にプロパティを要求したいときには <code>default =&gt; \"\",</code>  の行を消せば ok です。</p>\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code",
+    "blog-card"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "title": "かんたんPerl 第8章 自作関数サブルーチン",
+  "basename": "2016/02/21/161503",
+  "status": "Publish",
+  "publishedAt": "2016-02-21T07:15:03.000Z",
+  "categories": [],
+  "oldPath": "/entry/2016/02/21/161503",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2016/02/21/161503",
+  "html": "<h1><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%C0%A5%A4%A5%AF%A5%B9%A5%C8%A5%E9\" rel=\"noopener noreferrer\">ダイクストラ</a>法！</h1>\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%BE%F0%CA%F3%BD%E8%CD%FD%BB%EE%B8%B3\" rel=\"noopener noreferrer\">情報処理試験</a>頻出の「<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%C0%A5%A4%A5%AF%A5%B9%A5%C8%A5%E9\" rel=\"noopener noreferrer\">ダイクストラ</a>法」の<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%C0%A5%A4%A5%AF%A5%B9%A5%C8%A5%E9\" rel=\"noopener noreferrer\">ダイクストラ</a>って、人名だったんね\n\n<blockquote><p>順次処理、分岐処理、反復処理<br />\n（中略）\nこの3つに、サブルーチンというものを加えて、制御構造をきれいに考える事を、1960年代の後半にエドガー <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%C0%A5%A4%A5%AF%A5%B9%A5%C8%A5%E9\" rel=\"noopener noreferrer\">ダイクストラ</a>と言う人などが提唱したのが構造化プログラミング（structured program)です。</p></blockquote></li>\n<li>ほう！</li>\n<li><a href=\"https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%89%E3%82%AC%E3%83%BC%E3%83%BB%E3%83%80%E3%82%A4%E3%82%AF%E3%82%B9%E3%83%88%E3%83%A9\" rel=\"noopener noreferrer\">エドガー・ダイクストラ - Wikipedia</a>\n\n<blockquote><p>（Edsger Wybe <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Dijkstra\" rel=\"noopener noreferrer\">Dijkstra</a>, 1930年5月11日 - 2002年8月6日）は、オランダ人の計算機科学者。1972年、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%D7%A5%ED%A5%B0%A5%E9%A5%DF%A5%F3%A5%B0%B8%C0%B8%EC\" rel=\"noopener noreferrer\">プログラミング言語</a>の基礎研究への貢献に対して<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%C1%A5%E5%A1%BC%A5%EA%A5%F3%A5%B0%BE%DE\" rel=\"noopener noreferrer\">チューリング賞</a>を受賞。構造化プログラミングの提唱者。</p></blockquote></li>\n</ul>\n\n\n<h1>適切な機能の切り出し方</h1>\n\n<ul>\n<li>サブルーチンについてはだいたい分かるのだけど、自作<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8\" rel=\"noopener noreferrer\">スクリプト</a>における「適切な機能の切り出し方」ってのがイマイチで</li>\n<li>細かすぎても、おおざっぱすぎてもダメで、そういうあたりがプログラミングのセンスってやつなのかなぁと思ったり。</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": []
+}

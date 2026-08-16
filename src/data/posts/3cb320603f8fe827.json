@@ -1,0 +1,14 @@
+{
+  "title": "Perl入学式 #3",
+  "basename": "2013/09/25/000042",
+  "status": "Publish",
+  "publishedAt": "2013-09-24T15:00:42.000Z",
+  "categories": [],
+  "oldPath": "/entry/2013/09/25/000042",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2013/09/25/000042",
+  "html": "<blockquote><p>('Alice', 'Bob') という配列に対して、紹介した関数を使って操作して ('Amon2', 'Alice', 'Bob', '<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Catalyst\" rel=\"noopener noreferrer\">Catalyst</a>') という配列を作りましょう\n ('Alice', 'Bob') という配列に対して、紹介した関数を使って操作し、'Alice' を取り出してみましょう\n ('Alice', 'Bob') という配列に対して、紹介した関数を使って操作し、'Bob' を取り出してみましょう</p></blockquote>\n\n<p><a href=\"http://codepad.org/HGDUmiC9\" rel=\"noopener noreferrer\">自分の答え</a></p>\n\n<blockquote><p>(\"0120\" \"123\" \"XXX\") という内容の配列を qw ショートカットを使って作ってみましょう\n  上の問題で作った配列を、join で繋げてみましょう。なんだか電話番号っぽいので、ハイフン ('-') を間にはさみましょう。\n  文字列 \"/usr/bin/env <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/perl\" rel=\"noopener noreferrer\">perl</a>\" という文字列を、スラッシュ ('/') で分割して配列に格納してみましょう</p></blockquote>\n\n<p><a href=\"http://codepad.org/6I8P9yRH\" rel=\"noopener noreferrer\">自分の答え</a></p>\n\n<blockquote><p>自分の名前 (name)、性別 (sex)、好きな食べ物 (food) をキーにしたハッシュを作ってみましょう\n  また、そのハッシュをダンプしてみましょう</p></blockquote>\n\n<p><a href=\"http://codepad.org/2jKVOdJg\" rel=\"noopener noreferrer\">自分の答え</a></p>\n\n<blockquote><p>先ほどの問題で作ったハッシュに対して for で回して各要素にアクセスし \"name: <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Larry%20Wall\" rel=\"noopener noreferrer\">Larry Wall</a>\" のように整形して出力してください\n  (ヒント: keys を使います。というか (演習問題の都合上) 使って下さい)\n  先ほどの問題で作ったハッシュに対して、delete を使って性別の要素を取り除いて下さい</p></blockquote>\n\n<p><a href=\"http://codepad.org/Iy3NWo7h\" rel=\"noopener noreferrer\">自分の答え</a></p>\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "続・はじめてのPerl 第２版 第４章 リファレンス入門",
+  "basename": "2015/06/13/161224",
+  "status": "Publish",
+  "publishedAt": "2015-06-13T07:12:24.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/06/13/161224",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/06/13/161224",
+  "html": "<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/grep\" rel=\"noopener noreferrer\">grep</a></li>\n<li><code>grep $_ *2 , @array</code> と <code>grep {$_ *2} @array</code> どっちが正しいんだろう</li>\n<li><p>正しさ、というより利用シーンで使い分けってことなんかな</p></li>\n<li><p>map使うと行列の計算とか楽そう</p>\n\n<ul>\n<li>行列とか使わない仕事・生活だけど・・・</li>\n</ul>\n</li>\n<li><p>あれ？</p>\n\n<ul>\n<li>先週やってた内容（第３章）じゃん、と今更気づくも、復習と思ってそのまま勉強。</li>\n</ul>\n</li>\n</ul>\n\n\n<h1>第４章 リファレンス入門</h1>\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>入学式の練習問題を繰り返して身に付いた（気がする）リファレンスが、いようよ<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%AA%A5%E9%A5%A4%A5%EA%A1%BC\" rel=\"noopener noreferrer\">オライリー</a>本で登場</li>\n<li><p>というか、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%AA%A5%E9%A5%A4%A5%EA%A1%BC\" rel=\"noopener noreferrer\">オライリー</a>本はリファレンスが出てくるのが遅いんだな。ほかの初心者向け本は結構早い段階で出てきた気がする。</p>\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>入学式も早い時点で出てた</li>\n</ul>\n</li>\n<li><p>ref でリファレンスの種類を調べられるのか。</p>\n\n<ul>\n<li>いつもDataDumperたより</li>\n</ul>\n</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "続・はじめてのPerl 第２版 第２章 モジュールの使い方 , 第３章 中級者の基礎知識",
+  "basename": "2015/06/06/144444",
+  "status": "Publish",
+  "publishedAt": "2015-06-06T05:44:44.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/06/06/144444",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/06/06/144444",
+  "html": "<h1>モジュールのインターフェース</h1>\n\n<ul>\n<li><p>確かに、「関数インターフェース」と「<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%AA%A5%D6%A5%B8%A5%A7%A5%AF%A5%C8%BB%D8%B8%FE\" rel=\"noopener noreferrer\">オブジェクト指向</a>インターフェース」の二種類あったわ</p>\n\n<ul>\n<li>関数インターフェースの例\n\n<ul>\n<li><code>use File::Basename qw( fileparse basename );</code></li>\n</ul>\n</li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%AA%A5%D6%A5%B8%A5%A7%A5%AF%A5%C8%BB%D8%B8%FE\" rel=\"noopener noreferrer\">オブジェクト指向</a>インターフェースの例\n\n<ul>\n<li><code>my $filespec = File::Spec-&gt;catfile( $homedir{gilligan}, 'web_docs', 'photos', 'USS_Minnow.gif' );</code></li>\n</ul>\n</li>\n</ul>\n</li>\n<li><p>モジュールの関数の呼び出し方がなんで統一されてないんだろう？という疑問を今まで持たなかったな・・・</p>\n\n<ul>\n<li>我ながら鈍い</li>\n</ul>\n</li>\n</ul>\n\n\n<h1>map,<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/grep\" rel=\"noopener noreferrer\">grep</a>,glob</h1>\n\n<ul>\n<li>それぞれがリストをとって処理する、というのはもちろんわかっているんだけど</li>\n<li>それを連結・連続して処理させるって発送はなかった</li>\n<li>練習問題の、入力した<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%C0%B5%B5%AC%C9%BD%B8%BD\" rel=\"noopener noreferrer\">正規表現</a>に合致するファイルを表示する、という問題</li>\n</ul>\n\n\n<pre class=\"code lang-perl\" data-lang=\"perl\" data-unlink><span class=\"synStatement\">print</span>\n<span class=\"synStatement\">map {</span> <span class=\"synConstant\">\" </span><span class=\"synIdentifier\">$_</span><span class=\"synSpecial\">\\n</span><span class=\"synConstant\">\"</span> <span class=\"synStatement\">}</span>\n<span class=\"synStatement\">grep {</span> <span class=\"synStatement\">eval</span>{ <span class=\"synStatement\">/</span><span class=\"synIdentifier\">$regex</span><span class=\"synStatement\">/</span> } <span class=\"synStatement\">}</span> <span class=\"synStatement\">glob</span>( <span class=\"synConstant\">\".* *\"</span> );\n</pre>\n\n\n<ul>\n<li>glob でディレクトリ内のファイル一覧をリストで取得し、そのリストを<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/grep\" rel=\"noopener noreferrer\">grep</a>で処理して合致するものだけをリストにし、そのリストにmapで文字列修飾する</li>\n<li>すげえ</li>\n<li>でもあんまりまとめすぎると可読性落ちそう</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

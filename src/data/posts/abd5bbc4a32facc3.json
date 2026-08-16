@@ -1,0 +1,14 @@
+{
+  "title": "自作スクリプト 20131101",
+  "basename": "2013/11/01/215929",
+  "status": "Publish",
+  "publishedAt": "2013-11-01T12:59:29.000Z",
+  "categories": [],
+  "oldPath": "/entry/2013/11/01/215929",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2013/11/01/215929",
+  "html": "<h1><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EC%A5%A4%A5%D4%A5%F3%A5%B0\" rel=\"noopener noreferrer\">スクレイピング</a>して某サイトのランキングをテキストで出力</h1>\n\n<p>とうとう、やっと、動いたー！長かった。構想自体はずっと昔からあったけど、技術も知識もなくて完成しなかった・・・しかしなんとか本日動くところまでこぎつけた。</p>\n\n<p>今となってはfor文も知らないでよくやってたなぁ、とか、かつての自分の力技にむしろ驚く。あと、ハッシュとリファレンスが便利です。これもつい最近まで知らなかったんだもんなぁ。やっぱ、講師なり先生がいるって重要だわ。</p>\n\n<p>ただ、もう少し変数の受け渡しに工夫できる点があるので、そこは修正したい。</p>\n\n<p>そんで、<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>入学式でやった<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Youtube\" rel=\"noopener noreferrer\">Youtube</a> <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/API\" rel=\"noopener noreferrer\">API</a>使って、Mojolicious::Liteなんかも使って、満足いくものに仕上げたい。</p>\n\n<h3><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/MacOS\" rel=\"noopener noreferrer\">MacOS</a>とWindowsを判断して出力時の<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%CA%B8%BB%FA%A5%B3%A1%BC%A5%C9\" rel=\"noopener noreferrer\">文字コード</a>を変える</h3>\n\n<p>すきま時間使って家（<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/MacOS\" rel=\"noopener noreferrer\">MacOS</a>）でも会社（Windows）でもスクリプトをいじる人へ。</p>\n\n<pre class=\"code lang-perl\" data-lang=\"perl\" data-unlink><span class=\"synComment\"># $decodedってのは、perlの内部文字列にデコードされたデータが</span>\n<span class=\"synComment\"># 入っていると仮定</span>\n<span class=\"synStatement\">if</span> ( <span class=\"synIdentifier\">$^O</span> <span class=\"synStatement\">eq</span> <span class=\"synConstant\">'MSWin32'</span> ) {\n    <span class=\"synStatement\">print</span> encode ( <span class=\"synConstant\">'cp932'</span>, <span class=\"synIdentifier\">$decoded</span> );\n}\n<span class=\"synStatement\">elsif</span> ( <span class=\"synIdentifier\">$^O</span> <span class=\"synStatement\">eq</span> <span class=\"synConstant\">'darwin'</span> ) {\n    <span class=\"synStatement\">print</span> encode ( <span class=\"synConstant\">'utf-8'</span>, <span class=\"synIdentifier\">$decoded</span> );\n}\n<span class=\"synStatement\">else</span> {\n    <span class=\"synStatement\">print</span> <span class=\"synConstant\">\"Other\"</span>;\n}\n</pre>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

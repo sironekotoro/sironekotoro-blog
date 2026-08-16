@@ -1,0 +1,14 @@
+{
+  "title": "続・はじめてのPerl 第２版 第１３章 オブジェクト入門",
+  "basename": "2015/08/30/100341",
+  "status": "Publish",
+  "publishedAt": "2015-08-30T01:03:41.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/08/30/100341",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/08/30/100341",
+  "html": "<h1><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%AA%A5%D6%A5%B8%A5%A7%A5%AF%A5%C8%BB%D8%B8%FE\" rel=\"noopener noreferrer\">オブジェクト指向</a>・・・</h1>\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%BE%F0%CA%F3%BD%E8%CD%FD%BB%EE%B8%B3\" rel=\"noopener noreferrer\">情報処理試験</a>で、概要だけは知って・・・いや、忘れた。\n\n<ul>\n<li>継承とか、ポリフォリズムとか、隠蔽化とか・・・</li>\n<li>車クラスがあって、走るんとブレーキって<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%E1%A5%BD%A5%C3%A5%C9\" rel=\"noopener noreferrer\">メソッド</a>があって（危うい</li>\n</ul>\n</li>\n</ul>\n\n\n<blockquote><p>今のところは、Class-&gt;method と すると、Class パッケージ内の method サブルーチンが呼び出されると言っておきましょう。</p>\n\n<p><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/OOP\" rel=\"noopener noreferrer\">OOP</a> のもっ とも重要な原則の 1 つは、共通コードを最小限に減らすことです。</p></blockquote>\n\n<pre class=\"code lang-perl\" data-lang=\"perl\" data-unlink>Class-&gt;method(<span class=\"synIdentifier\">@args</span>)  \nClass::method(<span class=\"synConstant\">'Class'</span>, <span class=\"synIdentifier\">@args</span>);\n</pre>\n\n\n<p>これは、第1引数としてクラス名を受け付けているということです。@args が指定されていなければ、クラス名だけが引数になります。</p>\n\n<ul>\n<li><p>「@args が指定されていなければ、クラス名だけが引数になります。」へー</p></li>\n<li><p>で、parentプラグマやSUPERクラス、で終わってしまった・・・え？これだけ？</p></li>\n<li><p>これも、自分のプログラムにどう生かすか見当つかない・・・</p>\n\n<ul>\n<li>共通コードを減らす、ってことには大いなるメリットを感じるのだけど。</li>\n</ul>\n</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

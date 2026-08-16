@@ -1,0 +1,14 @@
+{
+  "title": "業務に役立つPerl 第3章",
+  "basename": "2015/10/24/131219",
+  "status": "Publish",
+  "publishedAt": "2015-10-24T04:12:19.000Z",
+  "categories": [],
+  "oldPath": "/entry/2015/10/24/131219",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2015/10/24/131219",
+  "html": "<h1><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Sublime\" rel=\"noopener noreferrer\">Sublime</a> <a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> Tidyの偉大さ</h1>\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>入学式（2013年）でおすすめ環境・エディタとして紹介されていた「<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/sublime\" rel=\"noopener noreferrer\">sublime</a> text2」には、SublimePerlTidy という追加機能がある</li>\n<li>これのおかげで、形については<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a> Best Practice通りになってる</li>\n<li>早い時点でこれを入れることができて、本当にラッキーだった</li>\n</ul>\n\n\n<h1>PertTidy以外の部分</h1>\n\n<ul>\n<li>strict ＆ warnings は有効に</li>\n<li>レキシカル変数を使う</li>\n<li>デフォルト変数($_)は可読性下げるので使わない</li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%CC%BF%CC%BE%B5%AC%C2%A7\" rel=\"noopener noreferrer\">命名規則</a>\n\n<ul>\n<li>レキシカル変数の<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%CC%BF%CC%BE%B5%AC%C2%A7\" rel=\"noopener noreferrer\">命名規則</a>は小文字とアンダーバー</li>\n<li>パッケージ変数の<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%CC%BF%CC%BE%B5%AC%C2%A7\" rel=\"noopener noreferrer\">命名規則</a>は大文字とアンダーバー</li>\n<li>サブルーチンの<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%CC%BF%CC%BE%B5%AC%C2%A7\" rel=\"noopener noreferrer\">命名規則</a>は小文字とアンダーバー\n\n<ul>\n<li>動詞 ＋ 名詞の形式にすると分かりやすい</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>do 〜 while は使わない</li>\n<li>redo,gotoも使わない</li>\n<li>foreachではレキシカル変数を使う</li>\n<li><p>open</p>\n\n<ul>\n<li>第一引数はレキシカル変数にする</li>\n<li>３つの引数を使うやり方で</li>\n<li>開けなかったときの例外処理も書いておく</li>\n</ul>\n\n\n<p>```<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/perl\" rel=\"noopener noreferrer\">perl</a>\n open $fh , '&lt;' , '$log_file'\n       or die \"Cannnot open file \\\"$log_file\\\":$!\";</p></li>\n<li><p>サブルーチンのプロトタイプは使わない</p></li>\n<li>コメントは処理の説明を書く</li>\n<li>不必要なモジュールは読み込まない</li>\n<li>インポートする関数を明示する</li>\n<li>日本語などのマルチ梅友次を使うときにはEncodeモジュールを使う</li>\n<li>utf8形式で保存し、utf8プラグマをつける</li>\n<li>エラーは例外処理をつかう\n\n<ul>\n<li>evalブロックで囲う</li>\n<li>エラーが発生すると@_にエラーメッセージが格納される</li>\n</ul>\n</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

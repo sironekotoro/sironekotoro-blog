@@ -1,0 +1,18 @@
+{
+  "title": " Perl入学式 2018 in東京 秋開講 第4回 お疲れ様でした",
+  "basename": "2019/02/25/120000",
+  "status": "Publish",
+  "publishedAt": "2019-02-25T03:00:00.000Z",
+  "categories": [
+    "Perl入学式"
+  ],
+  "oldPath": "/entry/2019/02/25/120000",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2019/02/25/120000",
+  "html": "<p>受講された方、サポーターの方、お疲れ様でした。 講師をやったジャージの人です。</p>\n\n<p>スライド中の練習問題と復習問題ですが、昨年夏に書いた解答例をblogに掲載しています。\n参考にしてください。</p>\n\n<p><iframe title=\" Perl入学式 in 東京 第4回 サブルーチン/正規表現編 の練習問題＆復習問題の解答例  - sironekotoroの日記\" class=\"embed-card embed-blogcard\" loading=\"lazy\" sandbox=\"allow-scripts allow-same-origin allow-popups\" referrerpolicy=\"no-referrer\"></iframe><cite class=\"hatena-citation\"><a href=\"/entry/2018/07/22/161108\">sironekotoro.hateblo.jp</a></cite></p>\n\n<p>あと、時々つかったスライドも置いておきます。</p>\n\n<p><iframe title=\"Perl入学式2018 in東京 秋開講 第4回 サブルーチン / 正規表現\" class=\"embed-card embed-webcard\" loading=\"lazy\" sandbox=\"allow-scripts allow-same-origin allow-popups\" referrerpolicy=\"no-referrer\"></iframe><cite class=\"hatena-citation\"><a href=\"https://docs.google.com/presentation/d/1oFqHypFItAF9JQzLjUW431y26lJtqvS5kD7rwvqGwdY/edit#slide=id.p\" rel=\"noopener noreferrer\">docs.google.com</a></cite></p>\n\n<h2>ピザ会のお題</h2>\n\n<p><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>入学式 in東京 にて恒例となったピザ会のお題です。今回のお題は・・・</p>\n\n<p><b>「<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%A5%B5%A5%E9%A5%EA%A1%BC%A5%DE%A5%F3%C0%EE%CC%F8\" rel=\"noopener noreferrer\">サラリーマン川柳</a>」のサイトから川柳を集め、それを元に「上の句」「中の句」「下の句」で分割し、ランダムに組み合わせ、新たな俳句を生成せよ！</b></p>\n\n<p>というもの</p>\n\n<p><iframe title=\"サラリーマン川柳｜第一生命保険株式会社\" class=\"embed-card embed-webcard\" loading=\"lazy\" sandbox=\"allow-scripts allow-same-origin allow-popups\" referrerpolicy=\"no-referrer\"></iframe><cite class=\"hatena-citation\"><a href=\"https://event.dai-ichi-life.co.jp/company/senryu/archive/31-11-100.html\" rel=\"noopener noreferrer\">event.dai-ichi-life.co.jp</a></cite></p>\n\n<p><code>__DATA__</code>セクションにそのまま俳句コピっておっけーというレギュレーションだったので、サクッと出来たのがこちら。</p>\n\n<p><a href=\"https://bitbucket.org/snippets/sironekotoro/AeaK7L\" rel=\"noopener noreferrer\">川柳をランダムに生成する — Bitbucket</a></p>\n\n<p>下はWebから持ってきて10句を表示する版。<br />\n（<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/https\" rel=\"noopener noreferrer\">https</a>のサイトへのアクセスが必要なので、<code>IO::Socket::SSL</code>と<code>Net::SSLeay</code>が必要。）<br />\nルビ部分の削除をサブルーチンに分離し、ルビの削除と俳句部分の抜き出しに<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/%C0%B5%B5%AC%C9%BD%B8%BD\" rel=\"noopener noreferrer\">正規表現</a>を利用しています。</p>\n\n<p><a href=\"https://bitbucket.org/snippets/sironekotoro/Eear7x\" rel=\"noopener noreferrer\">川柳をランダムに生成する（Webから撮ってきて10首ほど表示版） — Bitbucket</a></p>\n\n<h2>次回予告</h2>\n\n<p><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/Perl\" rel=\"noopener noreferrer\">Perl</a>入学式 in東京 第5回ですが、3月30日（土曜日）を予定しています。</p>\n\n<p>今回、時間が余れば以下の第5回予告編スライドを投入したかったのですが、存外時間が押して紹介できなかったので、ここで紹介して供養しまする。</p>\n\n<p><iframe title=\"Perl入学式 第4.5回\" class=\"embed-card embed-webcard\" loading=\"lazy\" sandbox=\"allow-scripts allow-same-origin allow-popups\" referrerpolicy=\"no-referrer\"></iframe><cite class=\"hatena-citation\"><a href=\"https://docs.google.com/presentation/d/1LSpJORtp4UKZfbplZTE1jcIRad4LH8LRorLTtDxm4og/edit?usp=sharing\" rel=\"noopener noreferrer\">docs.google.com</a></cite></p>\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code",
+    "blog-card",
+    "internal-link"
+  ]
+}

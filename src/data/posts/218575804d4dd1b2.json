@@ -1,0 +1,14 @@
+{
+  "title": "Excel VBAスタンダード 公式テキスト 7章 関数",
+  "basename": "2014/07/13/120434",
+  "status": "Publish",
+  "publishedAt": "2014-07-13T03:04:34.000Z",
+  "categories": [],
+  "oldPath": "/entry/2014/07/13/120434",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2014/07/13/120434",
+  "html": "<h1>7-1 配列を操作する関数</h1>\n\n<ul>\n<li><code>LBound</code> 引数に指定した配列で使用できる最も小さなインデックス番号を返す</li>\n<li><code>UBound</code> 引数に指定した配列で使用できる最も大きなインデックス番号を返す</li>\n<li><code>split</code> 文字列データを区切り文字で区切る。\n\n<ul>\n<li><code>tmp = Split(\"tanaka/suzuki/yamada\", \"/\")</code></li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/perl\" rel=\"noopener noreferrer\">perl</a>の<code>split</code>とは引数の順番が逆</li>\n</ul>\n</li>\n</ul>\n\n\n<h1>7-2 データを判定する関数</h1>\n\n<ul>\n<li><code>IsArray</code> 引数が配列のときにTrueを返す</li>\n</ul>\n\n\n<pre class=\"code\" data-unlink>Dim Files As Variant\n' GetOpenFilename ファイルを開くダイアログボックスの表示\n' MultiSelectにTrueで複数のファイルを参照できる\nFiles = Application.GetOpenFilename(MultiSelect:=True)\nIf Not IsArray(Files) Then MsgBox \"キャンセルされました\"</pre>\n\n\n<ul>\n<li><code>IsDate</code> 引数が日付のときにTrueを返す</li>\n</ul>\n\n\n<pre class=\"code\" data-unlink>Dim buf As String\nbuf = InputBox(\"生年月日は？\") '\nIf IsDate(buf) Then\n    MsgBox Format(buf, \"ggge年です\")\nElse\n    MsgBox \"日付を入れてください\"\nEnd If</pre>\n\n\n<ul>\n<li><code>IsNumeric</code> 引数が数値のときにTrueを返す</li>\n</ul>\n\n\n<pre class=\"code\" data-unlink>Dim buf As String\nbuf = InputBox(\"税抜き金額は?\")\nIf IsNumeric(buf) Then\n' 2014年現在、消費税は8%\n    MsgBox Format(buf * 1.08, \"#,##0円（税込）\")\nElse\n    MsgBox \"数値を入力してください\"\nEnd If</pre>\n\n\n<h1>7-3 日付を操作する関数</h1>\n\n<ul>\n<li>'DateSerial' 引数で指定した年月日に該当する日付データを返す</li>\n</ul>\n\n\n<pre class=\"code\" data-unlink>Dim buf As String\nbuf = InputBox(\"判定する年は？\")\nIf Day(DateSerial(buf, 3, 1) - 1) = 29 Then\n' 閏年は\"Leap Year\"というそうな\n    MsgBox \"Leap Year\"\nElse\n    MsgBox \"Normal Year\"\nEnd If</pre>\n\n\n<ul>\n<li>ちょっとだけ手を加えてみる</li>\n</ul>\n\n\n<pre class=\"code\" data-unlink>Dim buf As String, yearcheck As String\nbuf = InputBox(\"判定する年は？\")\nIf Day(DateSerial(buf, 3, 1) - 1) = 29 Then\n' 閏年は\"Leap Year\"というそうな\n    yearcheck = \"Leap Year!\"\nElse\n    yearcheck = \"Normal Year\"\nEnd If\n\nMsgBox yearcheck, Title:=\"LEAP YEAR?\"\n</pre>\n\n\n-----",
+  "imageUrls": [],
+  "features": [
+    "code"
+  ]
+}

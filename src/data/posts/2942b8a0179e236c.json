@@ -1,0 +1,12 @@
+{
+  "title": "serverman VPSで自作スクリプトを動かす",
+  "basename": "2013/12/14/105823",
+  "status": "Publish",
+  "publishedAt": "2013-12-14T01:58:23.000Z",
+  "categories": [],
+  "oldPath": "/entry/2013/12/14/105823",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2013/12/14/105823",
+  "html": "<h3><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/XML\" rel=\"noopener noreferrer\">XML</a>::Parserでつまずく</h3>\n\n<ul>\n<li><p>以前作った<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/youtube\" rel=\"noopener noreferrer\">youtube</a> searchをVPSで動かそうと思ったが・・・エラー</p>\n\n<ul>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/WebService\" rel=\"noopener noreferrer\">WebService</a>::Simpleが入ってなかった\n\n<ul>\n<li><code>cpanm sudo WebService::Simple</code></li>\n<li><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/XML\" rel=\"noopener noreferrer\">XML</a>::Parserが入らない・・・\n\n<ul>\n<li>Windowsでも、Macでもここで引っ掛かった気がする</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>開発環境と、ローカルな環境でモジュールをそろえるのとかってどうやってんだろ？</li>\n</ul>\n</li>\n<li><p><a href=\"http://d.hatena.ne.jp/gessy0129/20110105/1294190829\" rel=\"noopener noreferrer\">cpanを用いたXML::Parserのインストール - 海賊船で働くデベロッパーダイアリー</a></p>\n\n<ul>\n<li>おかげで<a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/XML\" rel=\"noopener noreferrer\">XML</a>::Parserが入り、うちの作ったスクリプトも動くようになりました。</li>\n<li>ローカルじゃない、Web上で動いている自作スクリプト。感動だわ。\n\n<ul>\n<li>しかし、セキュリティが気になってすぐにポートを閉じた\n\n<ul>\n<li>バリデーションとか全然考えてなかったものなぁ</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": []
+}

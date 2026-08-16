@@ -1,0 +1,12 @@
+{
+  "title": "Excel VBA ベーシック 公式テキスト 6章（復習）",
+  "basename": "2014/04/12/124738",
+  "status": "Publish",
+  "publishedAt": "2014-04-12T03:47:38.000Z",
+  "categories": [],
+  "oldPath": "/entry/2014/04/12/124738",
+  "sourceUrl": "https://sironekotoro.hateblo.jp/entry/2014/04/12/124738",
+  "html": "<h1><a class=\"keyword\" href=\"http://d.hatena.ne.jp/keyword/VBA\" rel=\"noopener noreferrer\">VBA</a> 第６章</h1>\n\n<h2>セルの指定方法</h2>\n\n<ul>\n<li>よく使う\n\n<ul>\n<li>Range(セル)</li>\n<li>Cells(行,列)</li>\n</ul>\n</li>\n<li>時々使う\n\n<ul>\n<li>ActiveCell</li>\n<li>Selection</li>\n<li>CurrentRegion</li>\n<li>UsedRange</li>\n</ul>\n</li>\n</ul>\n\n\n<p>− 行や列の指定\n  - Rows\n  - Columns</p>\n\n<p>− ワークシートの指定\n  − Worksheets(\"Sheet1\")</p>\n\n<h2>プロパティ</h2>\n\n<ul>\n<li>Value\n− Text\n\n<ul>\n<li>読み取り専用のプロパティ</li>\n<li>表示形式が設定されていたときは、それを反映する</li>\n</ul>\n</li>\n<li>Formula\n\n<ul>\n<li>セル内の数式の取得につかう</li>\n</ul>\n</li>\n<li>NumberFormat\n\n<ul>\n<li>セルの書式設定</li>\n</ul>\n</li>\n</ul>\n\n\n<h2>メソッド</h2>\n\n<ul>\n<li>Select</li>\n<li>Activate</li>\n<li>ClearContents</li>\n<li>Clear</li>\n<li>Delete\n\n<ul>\n<li>shift:=xlToLeft</li>\n<li>xlUp</li>\n</ul>\n</li>\n<li>Copy\n\n<ul>\n<li>Destination:=Range(\"A1\")</li>\n</ul>\n</li>\n</ul>\n\n\n<h2>範囲を返すプロパティ</h2>\n\n<ul>\n<li>Offset(行,列)\n\n<ul>\n<li>基準となるセルから相対的に移動したセル</li>\n</ul>\n</li>\n<li>Resize(行,列)\n\n<ul>\n<li>基準となるセルの範囲の大きさを変更</li>\n</ul>\n</li>\n</ul>\n\n\n<h2>複数セルの指定方法</h2>\n\n<ul>\n<li>Range(範囲の開始セル,範囲の終端セル)</li>\n</ul>\n\n\n-----",
+  "imageUrls": [],
+  "features": []
+}
