@@ -87,9 +87,17 @@ public/
 ## Build & Validation
 
 - **Astro Check**: PASS
-- **Tests**: 3 tests, all passing
+- **Tests**: 10 tests (fixture-based), all passing
 - **Build**: 341 pages generated
 - **Broken Images**: 0
+
+## Security / Privacy
+
+- **Export原番**: 下書き37件を含むため、Git管理対象外 (`migration-source/*.export.txt` は `.gitignore`)
+- **公開記事**: 338件 (Publish) のみを変換・公開
+- **下書き**: 37件は変換対象外。生成済み公開コンテンツへの混入なし
+- **Test fixture**: `tests/fixtures/sample-export.txt` は人工データ (実ブログ本文不使用)
+- **Image manifest**: ローカル絶対パスを含まない (相対 `/images/migrated/` のみ)
 
 ## Known Limitations
 
@@ -97,6 +105,7 @@ public/
 - Third-party images kept at original URLs
 - Hatena-specific syntax (keywords, blog cards) kept as-is
 - Comments not migrated (not in export)
+- 公開記事本文に実ホームパス (`/Users/sironekotoro/...`) を含むものがあるが、既にはてなブログで公開済みの情報であり原文を壊さないため保持
 
 ## Re-run Instructions
 

@@ -1,4 +1,6 @@
 # Sensitive migration inputs and any draft-derived local artifacts
+# Hatena export source is intentionally NOT committed (contains drafts)
+migration-source/*.export.txt
 migration-work/
 reports/private/
 

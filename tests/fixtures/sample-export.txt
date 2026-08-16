@@ -1,0 +1,99 @@
+AUTHOR: test-author
+TITLE: Hello Astro Migration
+BASENAME: 2024/01/15/120000
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: 0
+DATE: 01/15/2024 12:00:00
+-----
+BODY:
+<p>This is a public sample article.</p>
+
+<h2>Heading</h2>
+
+<ul>
+<li>item one</li>
+<li>item two</li>
+</ul>
+
+<pre class="code lang-perl" data-lang="perl"><span>print "hello";</span></pre>
+
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/t/test/20240115/20240115120000.png" width="800" height="600" loading="lazy" title="" class="hatena-fotolife"></p>
+
+<p><a href="https://example.com/external">external link</a></p>
+
+<p><a href="https://sironekotoro.hateblo.jp/entry/2023/12/01/100000">internal link</a></p>
+
+-----
+--------
+AUTHOR: test-author
+TITLE: 日本語のタイトル
+BASENAME: 2024/02/01/080000
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: 0
+DATE: 02/01/2024 08:00:00
+CATEGORY: perl
+CATEGORY: 技術
+-----
+BODY:
+<p>日本語本文を含む記事です。</p>
+
+<table>
+<tr><th>名前</th><th>値</th></tr>
+<tr><td>foo</td><td>bar</td></tr>
+</table>
+
+-----
+--------
+AUTHOR: test-author
+TITLE: Draft Sample Article
+BASENAME: 2024/03/01/100000
+STATUS: Draft
+ALLOW COMMENTS: 1
+CONVERT BREAKS: 0
+DATE: 03/01/2024 10:00:00
+-----
+BODY:
+<p>This is a draft body that must never appear in public output.</p>
+
+<p>secret-draft-marker-fragment</p>
+
+-----
+--------
+AUTHOR: test-author
+TITLE: Article with Image and HTML
+BASENAME: 2024/04/01/090000
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: 0
+DATE: 04/01/2024 09:30:00
+-----
+BODY:
+<p>Body with <strong>inline html</strong> and <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">youtube</a>.</p>
+
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="embed"></iframe>
+
+-----
+--------
+AUTHOR: test-author
+TITLE: Multiline Body Article
+BASENAME: 2024/05/01/140000
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: 0
+DATE: 05/01/2024 14:15:00
+-----
+BODY:
+<p>First paragraph.</p>
+
+<blockquote>Quoted text.</blockquote>
+
+<pre class="code"><span>line1</span>
+<span>line2</span>
+<span>line3</span></pre>
+
+<p>Last paragraph.</p>
+
+-----
+--------

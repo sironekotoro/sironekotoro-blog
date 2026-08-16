@@ -2,8 +2,9 @@ import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 
-export const SOURCE = path.resolve('migration-source/sironekotoro.hateblo.jp.export.txt');
+export const SOURCE = path.resolve(process.env.HATENA_EXPORT_PATH ?? 'migration-source/sironekotoro.hateblo.jp.export.txt');
 export const EXPECTED = { total: 375, publish: 338, draft: 37 };
+export const FIXTURE_EXPECTED = { total: 5, publish: 4, draft: 1 };
 
 export async function parseMt(file = SOURCE) {
   const bytes = await readFile(file);
@@ -40,7 +41,7 @@ function parseEntry(chunk, index) {
   };
 }
 
-export function assertCorpus(entries) {
+export function assertCorpus(entries, expected = EXPECTED) {
   const publish = entries.filter((entry) => entry.status === 'Publish');
   const draft = entries.filter((entry) => entry.status === 'Draft');
   const missing = publish.filter((entry) => !entry.basename);
@@ -48,8 +49,8 @@ export function assertCorpus(entries) {
   for (const entry of publish) counts.set(entry.basename, (counts.get(entry.basename) ?? 0) + 1);
   const duplicates = [...counts].filter(([, count]) => count > 1);
   const actual = { total: entries.length, publish: publish.length, draft: draft.length };
-  if (actual.total !== EXPECTED.total || actual.publish !== EXPECTED.publish || actual.draft !== EXPECTED.draft || missing.length || duplicates.length) {
-    throw new Error(`Corpus safety check failed: ${JSON.stringify({ ...actual, publishBasenameMissing: missing.length, publishBasenameDuplicates: duplicates.length })}`);
+  if (actual.total !== expected.total || actual.publish !== expected.publish || actual.draft !== expected.draft || missing.length || duplicates.length) {
+    throw new Error(`Corpus safety check failed: ${JSON.stringify({ ...actual, expected, publishBasenameMissing: missing.length, publishBasenameDuplicates: duplicates.length })}`);
   }
   const replacementCharacters = entries.reduce((count, entry) => count + ((`${entry.title}\n${entry.body}`.match(/\uFFFD/g) ?? []).length), 0);
   return { publish, draft, summary: { ...actual, publishBasenameMissing: 0, publishBasenameDuplicates: 0, sourceReplacementCharacters: replacementCharacters } };
