@@ -1,7 +1,7 @@
 import { mkdir, writeFile, readFile, readdir, rm, stat } from 'node:fs/promises';
 import path from 'node:path';
 import sanitizeHtml from 'sanitize-html';
-import { parseMt, assertCorpus, oldPath, parseJstDate, imageUrls, features } from './mt-lib.mjs';
+import { parseMt, assertCorpus, oldPath, parseJstDate, imageUrls, features, convertBlogCards } from './mt-lib.mjs';
 
 const IMAGE_DIR = path.resolve('public/images/migrated');
 const MANIFEST_PATH = path.resolve('reports/image-manifest.json');
@@ -77,6 +77,7 @@ async function main() {
 
   const dataDir = path.resolve('src/data/posts');
   await mkdir(dataDir, { recursive: true });
+  const titleLookup = new Map(publish.map((entry) => [oldPath(entry), entry.title]));
   
   const existingFiles = await readdir(dataDir);
   for (const file of existingFiles) {
@@ -89,7 +90,8 @@ async function main() {
   const generated = [];
   
   for (const entry of publish) {
-    let html = rewriteInternalLinks(entry.body);
+    let html = convertBlogCards(entry.body, { titleLookup });
+    html = rewriteInternalLinks(html);
     const urls = [...new Set(imageUrls(html))];
     
     imageStats.total += urls.length;

@@ -24,6 +24,10 @@ BODY:
 
 <p><a href="https://sironekotoro.hateblo.jp/entry/2023/12/01/100000">internal link</a></p>
 
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fsironekotoro.hateblo.jp%2Fentry%2F2024%2F02%2F01%2F080000" title="日本語のタイトル - sironekotoroの日記" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display:block;width:100%;height:190px;max-width:500px;margin:10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://sironekotoro.hateblo.jp/entry/2024/02/01/080000">sironekotoro.hateblo.jp</a></cite></p>
+
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fexample.com%2Fpage" title="External Page Title" class="embed-card embed-webcard" scrolling="no" frameborder="0" style="display:block;width:100%;height:190px;max-width:500px;margin:10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://example.com/page">example.com</a></cite></p>
+
 -----
 --------
 AUTHOR: test-author

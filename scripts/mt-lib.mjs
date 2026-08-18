@@ -112,3 +112,60 @@ function score(entry, target) {
 function featureReason(value) { return ({code:'コードブロックが多い',images:'画像が多い',table:'テーブルを含む','blog-card':'はてなブログカードを含む','external-embed':'外部サービス埋め込みを含む','internal-link':'旧ブログ内部リンクを含む'})[value]; }
 export function stableJson(value) { return `${JSON.stringify(value, null, 2)}\n`; }
 export function shortHash(value) { return createHash('sha256').update(value).digest('hex').slice(0, 16); }
+
+const HATENA_EMBED_CARD_RE = /<iframe\b[^>]*\bclass="[^"]*\bembed-card\b[^"]*"[^>]*>[\s\S]*?<\/iframe>/gi;
+const HATENA_PARTS_SRC_RE = /^https?:\/\/hatenablog-parts\.com\/embed\?(?:[^#]*)url=([^&]+)/i;
+
+export function escapeHtml(value) {
+  return String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+export function embedCardTarget(iframeTag, citeHref) {
+  if (citeHref) return citeHref;
+  const src = iframeTag.match(/\bsrc="([^"]*)"/i)?.[1] ?? '';
+  const match = src.match(HATENA_PARTS_SRC_RE);
+  return match ? decodeURIComponent(match[1]) : '';
+}
+
+/**
+ * はてなブログカード/ウェブカードのiframe（移行時にsrcが剥がれ白枠になる）を、
+ * 自前のリンクカードへ変換する。内部記事なら /entry/... への内部リンクカード、
+ * 外部URLなら外部リンクカードになる。
+ */
+export function convertBlogCards(html, { titleLookup = new Map() } = {}) {
+  let result = '';
+  let lastIndex = 0;
+  for (const match of html.matchAll(HATENA_EMBED_CARD_RE)) {
+    const iframe = match[0];
+    const before = html.slice(0, match.index);
+    const after = html.slice(match.index + iframe.length);
+    const cite = after.match(/^\s*<cite\b[^>]*>\s*<a\b[^>]*href="([^"]*)"[^>]*>[\s\S]*?<\/a>\s*<\/cite>/i);
+    const citeText = cite?.[0] ?? '';
+    const target = embedCardTarget(iframe, cite?.[1]);
+    const card = buildLinkCard({ iframe, target, titleLookup });
+    let start = match.index;
+    let end = match.index + iframe.length + citeText.length;
+    if (card !== iframe) {
+      const openP = /(<p>\s*)$/i.exec(before);
+      const closeP = /^\s*<\/p>/i.exec(after.slice(citeText.length));
+      if (openP && closeP) { start -= openP[1].length; end += closeP[0].length; }
+    }
+    result += html.slice(lastIndex, start) + card;
+    lastIndex = end;
+  }
+  return result + html.slice(lastIndex);
+}
+
+function buildLinkCard({ iframe, target, titleLookup }) {
+  const rawTitle = (iframe.match(/\btitle="([^"]*)"/i)?.[1] ?? '').trim();
+  const fallbackTitle = rawTitle.replace(/\s*-\s*sironekotoroの日記\s*$/i, '').trim();
+  if (!target) return iframe;
+  const internal = /^(?:https?:\/\/sironekotoro\.hateblo\.jp)?\/entry\//i.test(target);
+  if (internal) {
+    const path = target.replace(/^https?:\/\/sironekotoro\.hateblo\.jp/i, '');
+    const title = titleLookup.get(path) ?? (fallbackTitle || path);
+    return `<aside class="internal-link-card"><a href="${escapeHtml(path)}"><span class="internal-link-card__label">関連記事</span><strong class="internal-link-card__title">${escapeHtml(title)}</strong></a></aside>`;
+  }
+  const title = fallbackTitle || target;
+  return `<aside class="external-link-card"><a href="${escapeHtml(target)}" rel="noopener noreferrer"><span class="external-link-card__label">参考リンク</span><strong class="external-link-card__title">${escapeHtml(title)}</strong></a></aside>`;
+}
