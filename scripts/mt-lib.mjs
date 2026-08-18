@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
+import sanitizeHtml from 'sanitize-html';
 
 export const SOURCE = path.resolve(process.env.HATENA_EXPORT_PATH ?? 'migration-source/sironekotoro.hateblo.jp.export.txt');
 export const EXPECTED = { total: 375, publish: 338, draft: 37 };
@@ -168,4 +169,92 @@ function buildLinkCard({ iframe, target, titleLookup }) {
   }
   const title = fallbackTitle || target;
   return `<aside class="external-link-card"><a href="${escapeHtml(target)}" rel="noopener noreferrer"><span class="external-link-card__label">参考リンク</span><strong class="external-link-card__title">${escapeHtml(title)}</strong></a></aside>`;
+}
+
+/**
+ * 残存するiframe embedを正規化する。
+ * - Speaker Deck / SlideShare のスライド埋め込み: 復元・正規化して残す
+ * - YouTube: youtube-nocookie.com へ移し、title を付与して残す
+ * - Amazon広告ウィジェット (rcm-fe.amazon-adsystem.com): 廃止サービス → 商品リンクカードへ
+ * - OneDrive埋め込み: 403/要ログインで機能しない → 安全に除去
+ * - それ以外のsrc無しiframe: 白箱を残さないため除去
+ */
+export function normalizeEmbeds(html) {
+  return html.replace(/<iframe\b[\s\S]*?<\/iframe>/gi, (full) => transformIframe(full));
+}
+
+function parseIframeAttrs(open) {
+  const attrs = {};
+  for (const m of open.matchAll(/\s([a-zA-Z][\w-]*)=(?:"([^"]*)"|'([^']*)')/g)) attrs[m[1].toLowerCase()] = m[2] ?? m[3] ?? '';
+  const unquoted = open.match(/\ssrc=([^\s>]+)/i);
+  if (unquoted && !attrs.src) attrs.src = unquoted[1];
+  return attrs;
+}
+
+function speakerdeckHash(id) {
+  const m = /^talk_frame_([0-9a-f]+)$/i.exec(id ?? '');
+  return m ? m[1] : null;
+}
+
+function transformIframe(full) {
+  const open = full.match(/<iframe\b[^>]*>/i)?.[0];
+  if (!open) return full;
+  const attrs = parseIframeAttrs(open);
+  const src = attrs.src ?? '';
+  const speaker = speakerdeckHash(attrs.id);
+
+  if (speaker || /speakerdeck\.com\/player\//i.test(src)) {
+    const hash = speaker || src.match(/speakerdeck\.com\/player\/([0-9a-f]+)/i)?.[1];
+    if (!hash) return '';
+    return buildIframe({ src: `https://speakerdeck.com/player/${hash}`, title: 'Speaker Deck プレゼンテーション', width: attrs.width, height: attrs.height, id: attrs.id });
+  }
+  if (/slideshare\.net\/slideshow\/embed_code\/key\/([A-Za-z0-9_-]+)/i.test(src)) {
+    const key = src.match(/slideshow\/embed_code\/key\/([A-Za-z0-9_-]+)/i)[1];
+    return buildIframe({ src: `https://www.slideshare.net/slideshow/embed_code/key/${key}`, title: 'SlideShare プレゼンテーション', width: attrs.width, height: attrs.height });
+  }
+  if (/youtube\.com\/embed\/|youtube-nocookie\.com\/embed\//i.test(src)) {
+    const nocookie = src
+      .replace(/^https?:\/\/(?:www\.)?youtube\.com\//i, 'https://www.youtube-nocookie.com/')
+      .replace(/^\/\/(?:www\.)?youtube\.com\//i, 'https://www.youtube-nocookie.com/');
+    return buildIframe({ src: nocookie, title: attrs.title || 'YouTube video', width: attrs.width, height: attrs.height });
+  }
+  if (/rcm-fe\.amazon-adsystem\.com/i.test(src)) {
+    const asin = src.match(/asins=([A-Z0-9]{10})/i)?.[1];
+    if (!asin) return '';
+    const tag = src.match(/[?&](?:t|tag)=([A-Za-z0-9_-]+)/i)?.[1];
+    return `<aside class="external-link-card"><a href="https://www.amazon.co.jp/dp/${asin}${tag ? `?tag=${tag}` : ''}" rel="noopener noreferrer"><span class="external-link-card__label">参考リンク</span><strong class="external-link-card__title">Amazon.co.jp の商品ページ（ASIN ${asin}）</strong></a></aside>`;
+  }
+  if (/onedrive\.live\.com|office\.com/i.test(src)) return '';
+  if (!src) return '';
+  return full;
+}
+
+function buildIframe({ src, title, width, height, id }) {
+  const w = /^\d+$/.test(width ?? '') ? width : '';
+  const h = /^\d+$/.test(height ?? '') ? height : '';
+  const ratio = w && h ? `aspect-ratio:${w}/${h}; ` : '';
+  const idAttr = id ? ` id="${escapeHtml(id)}"` : '';
+  const wAttr = w ? ` width="${w}"` : '';
+  const hAttr = h ? ` height="${h}"` : '';
+  const allow = /youtube/i.test(src) ? ' allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"' : '';
+  return `<iframe${idAttr} src="${escapeHtml(src)}" title="${escapeHtml(title)}"${wAttr}${hAttr}${allow} loading="lazy" allowfullscreen="true" allowtransparency="true" frameborder="0" style="${ratio}border:0; display:block; width:100%; height:auto"></iframe>`;
+}
+
+export function rewriteInternalLinks(html) {
+  return html.replace(/https?:\/\/sironekotoro\.hateblo\.jp(\/entry\/[^"'\s<#?]+(?:[?#][^"'\s<]*)?)/gi, '$1');
+}
+
+export function safeHtml(html) {
+  html = html.replace(/<script\b[^>]*src=["'](https:\/\/gist\.github\.com\/[^"']+)["'][^>]*><\/script>/gi, '<p class="embed-fallback"><a href="$1">GitHub Gistを表示</a></p>');
+  return sanitizeHtml(html, {
+    allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img', 'figure', 'figcaption', 'iframe', 'video', 'source', 'details', 'summary', 'del', 'ins', 'kbd', 'mark']),
+    allowedAttributes: { '*': ['class', 'id', 'title', 'data-*'], a: ['href', 'name', 'target', 'rel'], img: ['src', 'alt', 'width', 'height', 'loading'], iframe: ['src', 'width', 'height', 'title', 'loading', 'allow', 'allowfullscreen', 'referrerpolicy', 'sandbox', 'style', 'allowtransparency', 'frameborder'], video: ['src', 'controls', 'poster', 'width', 'height'], source: ['src', 'type'], code: ['class'], time: ['datetime'] },
+    allowedSchemes: ['http', 'https', 'mailto'],
+    allowedIframeHostnames: ['www.youtube.com', 'www.youtube-nocookie.com', 'hatenablog.com', 'speakerdeck.com', 'www.slideshare.net'],
+    transformTags: {
+      a: (_tag, attrs) => ({ tagName: 'a', attribs: { ...attrs, ...(/^https?:/.test(attrs.href ?? '') ? { rel: 'noopener noreferrer' } : {}) } }),
+      img: (_tag, attrs) => ({ tagName: 'img', attribs: { ...attrs, loading: 'lazy' } }),
+      iframe: (_tag, attrs) => ({ tagName: 'iframe', attribs: { ...attrs, loading: 'lazy', sandbox: 'allow-scripts allow-same-origin allow-popups', referrerpolicy: 'no-referrer' } })
+    }
+  });
 }

@@ -1,8 +1,7 @@
 import { mkdir, writeFile, readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
-import sanitizeHtml from 'sanitize-html';
 import { parseArgs } from 'node:util';
-import { parseMt, assertCorpus, oldPath, parseJstDate, imageUrls, features, selectSamples, stableJson, shortHash, convertBlogCards } from './mt-lib.mjs';
+import { parseMt, assertCorpus, oldPath, parseJstDate, imageUrls, features, selectSamples, stableJson, shortHash, convertBlogCards, normalizeEmbeds, rewriteInternalLinks, safeHtml } from './mt-lib.mjs';
 
 const { values } = parseArgs({ options: { sample: { type:'string', default:'8' }, 'download-images': { type:'boolean', default:false } } });
 const count = Number(values.sample);
@@ -23,6 +22,7 @@ const imageManifest = {};
 const generated = [];
 for (const { entry, reasons } of selected) {
   let html = convertBlogCards(entry.body, { titleLookup });
+  html = normalizeEmbeds(html);
   html = rewriteInternalLinks(html);
   const urls = [...new Set(imageUrls(html))];
   if (values['download-images']) html = await localizeImages(html, urls, imageManifest);
@@ -38,17 +38,6 @@ await writeFile(path.join(reportDir,'migration-summary.json'), stableJson({ ...s
 await writeFile(path.join(reportDir,'image-manifest.json'), stableJson(imageManifest));
 console.log(JSON.stringify({ ...summary, generatedPublish:generated.length, generatedDraft:0, imageDownloadEnabled:Boolean(values['download-images']) }));
 
-function rewriteInternalLinks(html) { return html.replace(/https?:\/\/sironekotoro\.hateblo\.jp(\/entry\/[^"'\s<#?]+(?:[?#][^"'\s<]*)?)/gi, '$1'); }
-function safeHtml(html) {
-  html = html.replace(/<script\b[^>]*src=["'](https:\/\/gist\.github\.com\/[^"']+)["'][^>]*><\/script>/gi, '<p class="embed-fallback"><a href="$1">GitHub Gistを表示</a></p>');
-  return sanitizeHtml(html, {
-    allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img','figure','figcaption','iframe','video','source','details','summary','del','ins','kbd','mark']),
-    allowedAttributes: { '*':['class','id','title','data-*'], a:['href','name','target','rel'], img:['src','alt','width','height','loading'], iframe:['src','width','height','title','loading','allow','allowfullscreen','referrerpolicy','sandbox'], video:['src','controls','poster','width','height'], source:['src','type'], code:['class'], time:['datetime'] },
-    allowedSchemes: ['http','https','mailto'],
-    allowedIframeHostnames: ['www.youtube.com','www.youtube-nocookie.com','hatenablog.com'],
-    transformTags: { a:(_tag,attrs)=>({tagName:'a',attribs:{...attrs,...(/^https?:/.test(attrs.href??'')?{rel:'noopener noreferrer'}:{})}}), img:(_tag,attrs)=>({tagName:'img',attribs:{...attrs,loading:'lazy'}}), iframe:(_tag,attrs)=>({tagName:'iframe',attribs:{...attrs,loading:'lazy',sandbox:'allow-scripts allow-same-origin allow-popups',referrerpolicy:'no-referrer'}}) }
-  });
-}
 function isFotolife(url) { try { const host=new URL(url).hostname; return host === 'cdn-ak.f.st-hatena.com' || host.endsWith('.f.st-hatena.com'); } catch { return false; } }
 async function localizeImages(html, urls, manifest) {
   for (const url of urls.filter(isFotolife)) {

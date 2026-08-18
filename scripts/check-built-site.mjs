@@ -19,6 +19,19 @@ for (const file of all.filter((f) => f.endsWith('.html'))) {
   const html = await readFile(file, 'utf8');
   if (/"status"\s*:\s*"Draft"/.test(html)) failures.push(`${file}: draft marker`);
   if (/<iframe\b[^>]*\bclass="[^"]*\bembed-card\b/.test(html)) failures.push(`${file}: embed-card iframe remains`);
+  for (const iframe of html.matchAll(/<iframe\b[^>]*>[\s\S]*?<\/iframe>/gi)) {
+    const tag = iframe[0];
+    const src = tag.match(/\bsrc="([^"]*)"/)?.[1] ?? '';
+    if (!src) failures.push(`${file}: iframe without src`);
+    else if (/^http:\/\//.test(src)) failures.push(`${file}: HTTP iframe src ${src}`);
+    else {
+      try {
+        const host = new URL(src).hostname;
+        if (/rcm-fe\.amazon-adsystem\.com|onedrive\.live\.com|office\.com/.test(host)) failures.push(`${file}: broken embed (${host})`);
+      } catch { failures.push(`${file}: unparseable iframe src ${src}`); }
+    }
+    if (!/\btitle=/.test(tag)) failures.push(`${file}: iframe without title`);
+  }
   const canonical = html.match(/<link rel="canonical" href="([^"]*)"/)?.[1];
   if (canonical) {
     const url = new URL(canonical);

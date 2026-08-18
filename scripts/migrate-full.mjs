@@ -1,7 +1,6 @@
 import { mkdir, writeFile, readFile, readdir, rm, stat } from 'node:fs/promises';
 import path from 'node:path';
-import sanitizeHtml from 'sanitize-html';
-import { parseMt, assertCorpus, oldPath, parseJstDate, imageUrls, features, convertBlogCards } from './mt-lib.mjs';
+import { parseMt, assertCorpus, oldPath, parseJstDate, imageUrls, features, convertBlogCards, normalizeEmbeds, rewriteInternalLinks, safeHtml, stableJson, shortHash } from './mt-lib.mjs';
 
 const IMAGE_DIR = path.resolve('public/images/migrated');
 const MANIFEST_PATH = path.resolve('reports/image-manifest.json');
@@ -91,6 +90,7 @@ async function main() {
   
   for (const entry of publish) {
     let html = convertBlogCards(entry.body, { titleLookup });
+    html = normalizeEmbeds(html);
     html = rewriteInternalLinks(html);
     const urls = [...new Set(imageUrls(html))];
     
@@ -149,34 +149,6 @@ async function main() {
   
   console.log(`\nGenerated ${generated.length} articles`);
   await writeFile(path.resolve('reports/migration-full.json'), stableJson({ generated: generated.length, posts: generated, imageStats }));
-}
-
-function rewriteInternalLinks(html) {
-  return html.replace(/https?:\/\/sironekotoro\.hateblo\.jp(\/entry\/[^"'\s<#?]+(?:[?#][^"'\s<]*)?)/gi, '$1');
-}
-
-function safeHtml(html) {
-  html = html.replace(/<script\b[^>]*src=["'](https:\/\/gist\.github\.com\/[^"']+)["'][^>]*><\/script>/gi, '<p class="embed-fallback"><a href="$1">GitHub Gistを表示</a></p>');
-  return sanitizeHtml(html, {
-    allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img', 'figure', 'figcaption', 'iframe', 'video', 'source', 'details', 'summary', 'del', 'ins', 'kbd', 'mark']),
-    allowedAttributes: { '*': ['class', 'id', 'title', 'data-*'], a: ['href', 'name', 'target', 'rel'], img: ['src', 'alt', 'width', 'height', 'loading'], iframe: ['src', 'width', 'height', 'title', 'loading', 'allow', 'allowfullscreen', 'referrerpolicy', 'sandbox'], video: ['src', 'controls', 'poster', 'width', 'height'], source: ['src', 'type'], code: ['class'], time: ['datetime'] },
-    allowedSchemes: ['http', 'https', 'mailto'],
-    allowedIframeHostnames: ['www.youtube.com', 'www.youtube-nocookie.com', 'hatenablog.com'],
-    transformTags: {
-      a: (_tag, attrs) => ({ tagName: 'a', attribs: { ...attrs, ...(/^https?:/.test(attrs.href ?? '') ? { rel: 'noopener noreferrer' } : {}) } }),
-      img: (_tag, attrs) => ({ tagName: 'img', attribs: { ...attrs, loading: 'lazy' } }),
-      iframe: (_tag, attrs) => ({ tagName: 'iframe', attribs: { ...attrs, loading: 'lazy', sandbox: 'allow-scripts allow-same-origin allow-popups', referrerpolicy: 'no-referrer' } })
-    }
-  });
-}
-
-import { createHash } from 'node:crypto';
-function shortHash(value) {
-  return createHash('sha256').update(value).digest('hex').slice(0, 16);
-}
-
-function stableJson(value) {
-  return `${JSON.stringify(value, null, 2)}\n`;
 }
 
 main().catch(console.error);
