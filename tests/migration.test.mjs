@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
-import { parseMt, assertCorpus, oldPath, parseJstDate, imageUrls, FIXTURE_EXPECTED } from '../scripts/mt-lib.mjs';
+import { parseMt, assertCorpus, oldPath, parseJstDate, imageUrls, FIXTURE_EXPECTED, convertBlogCards } from '../scripts/mt-lib.mjs';
 
 const FIXTURE = path.resolve('tests/fixtures/sample-export.txt');
 
@@ -116,6 +116,75 @@ test('generated data: no draft markers or draft titles leaked', async () => {
     for (const marker of draftMarkers) {
       assert.ok(!post.title.includes(marker), `draft title leak ${marker} in ${file}`);
       assert.ok(!post.html.includes(marker), `draft body leak ${marker} in ${file}`);
+    }
+  }
+});
+
+test('blog card: internal cite becomes an internal link card with the canonical title', () => {
+  const html = '<p><iframe title="Any Title - sironekotoroの日記" class="embed-card embed-blogcard" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups" referrerpolicy="no-referrer"></iframe><cite class="hatena-citation"><a href="https://sironekotoro.hateblo.jp/entry/2024/02/01/080000">sironekotoro.hateblo.jp</a></cite></p>';
+  const lookup = new Map([['/entry/2024/02/01/080000', '日本語のタイトル']]);
+  const out = convertBlogCards(html, { titleLookup: lookup });
+  assert.match(out, /<aside class="internal-link-card">/);
+  assert.match(out, /href="\/entry\/2024\/02\/01\/080000"/);
+  assert.match(out, /internal-link-card__label">関連記事</);
+  assert.match(out, /internal-link-card__title">日本語のタイトル</);
+  assert.ok(!/<iframe/.test(out), 'no iframe remains');
+  assert.ok(!/sironekotoroの日記/.test(out), 'blog name suffix cleaned');
+  assert.ok(!/embed-card/.test(out), 'no embed-card class remains');
+});
+
+test('blog card: external cite becomes an external link card and is not treated as internal', () => {
+  const html = '<p><iframe title="External Page Title" class="embed-card embed-webcard" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups" referrerpolicy="no-referrer"></iframe><cite class="hatena-citation"><a href="https://example.com/page">example.com</a></cite></p>';
+  const out = convertBlogCards(html);
+  assert.match(out, /<aside class="external-link-card">/);
+  assert.match(out, /href="https:\/\/example\.com\/page"/);
+  assert.match(out, /rel="noopener noreferrer"/);
+  assert.match(out, /external-link-card__title">External Page Title</);
+  assert.ok(!/internal-link-card/.test(out));
+  assert.ok(!/<iframe/.test(out));
+});
+
+test('blog card: the wrapping <p> element is dropped around the converted card', () => {
+  const html = '<p><iframe title="T" class="embed-card embed-blogcard"></iframe><cite class="hatena-citation"><a href="https://sironekotoro.hateblo.jp/entry/2024/02/01/080000">x</a></cite></p>';
+  const out = convertBlogCards(html, { titleLookup: new Map([['/entry/2024/02/01/080000', '日本語のタイトル']]) });
+  assert.doesNotMatch(out, /<p><aside/);
+  assert.match(out, /<aside class="internal-link-card">/);
+});
+
+test('blog card: missing cite falls back to the embedded URL from hatenablog-parts src', () => {
+  const src = 'https://hatenablog-parts.com/embed?url=https%3A%2F%2Fexample.com%2Fpage';
+  const html = `<iframe src="${src}" title="Fallback Title" class="embed-card embed-webcard"></iframe>`;
+  const out = convertBlogCards(html);
+  assert.match(out, /<aside class="external-link-card">/);
+  assert.match(out, /href="https:\/\/example\.com\/page"/);
+  assert.match(out, /Fallback Title/);
+});
+
+test('blog card: entries without a target are left untouched', () => {
+  const html = '<p><iframe class="embed-card embed-blogcard"></iframe></p>';
+  assert.equal(convertBlogCards(html), html);
+});
+
+test('generated data: no embed-card iframes remain anywhere', async () => {
+  const files = (await readdir('src/data/posts')).filter((f) => f.endsWith('.json'));
+  assert.ok(files.length >= 100, 'expected a populated corpus');
+  for (const file of files) {
+    const post = JSON.parse(await readFile(`src/data/posts/${file}`, 'utf8'));
+    assert.ok(!/embed-card/.test(post.html), `embed-card iframe remains in ${file}`);
+    assert.ok(!/hatenablog-parts\.com/.test(post.html), `hatenablog-parts src remains in ${file}`);
+  }
+});
+
+test('generated data: every internal link card points at an existing published post', async () => {
+  const files = (await readdir('src/data/posts')).filter((f) => f.endsWith('.json'));
+  const paths = new Set();
+  for (const file of files) {
+    paths.add(JSON.parse(await readFile(`src/data/posts/${file}`, 'utf8')).oldPath);
+  }
+  for (const file of files) {
+    const post = JSON.parse(await readFile(`src/data/posts/${file}`, 'utf8'));
+    for (const m of post.html.matchAll(/<aside class="internal-link-card"><a href="([^"]*)"/g)) {
+      assert.ok(paths.has(m[1]), `internal link card points at missing post ${m[1]} in ${file}`);
     }
   }
 });

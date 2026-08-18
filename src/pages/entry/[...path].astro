@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { migratedPosts } from '../../lib/posts';
+import { applyBaseUrl, baseUrl } from '../../lib/basePath';
 import type { MigratedPost } from '../../types';
 export function getStaticPaths() { return migratedPosts.map((post) => ({ params: { path: post.oldPath.replace(/^\/entry\//, '') }, props: { post } })); }
 const { post } = Astro.props as { post: MigratedPost };
+const html = applyBaseUrl(post.html, baseUrl());
 ---
 <BaseLayout title={post.title} description={`${post.title}（はてなブログからの移行記事）`}>
-  <article><h1>{post.title}</h1><p class="meta"><time datetime={post.publishedAt}>{new Date(post.publishedAt).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})}</time></p><p class="categories">{post.categories.join(' / ')}</p><div class="entry-content" set:html={post.html} /></article>
+  <article><h1>{post.title}</h1><p class="meta"><time datetime={post.publishedAt}>{new Date(post.publishedAt).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})}</time></p><p class="categories">{post.categories.join(' / ')}</p><div class="entry-content" set:html={html} /></article>
 </BaseLayout>

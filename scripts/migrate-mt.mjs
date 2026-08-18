@@ -2,7 +2,7 @@ import { mkdir, writeFile, readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import sanitizeHtml from 'sanitize-html';
 import { parseArgs } from 'node:util';
-import { parseMt, assertCorpus, oldPath, parseJstDate, imageUrls, features, selectSamples, stableJson, shortHash } from './mt-lib.mjs';
+import { parseMt, assertCorpus, oldPath, parseJstDate, imageUrls, features, selectSamples, stableJson, shortHash, convertBlogCards } from './mt-lib.mjs';
 
 const { values } = parseArgs({ options: { sample: { type:'string', default:'8' }, 'download-images': { type:'boolean', default:false } } });
 const count = Number(values.sample);
@@ -11,6 +11,7 @@ const entries = await parseMt();
 const { publish, summary } = assertCorpus(entries);
 const selected = selectSamples(publish, count);
 if (selected.length !== count) throw new Error(`Could only select ${selected.length} samples`);
+const titleLookup = new Map(publish.map((entry) => [oldPath(entry), entry.title]));
 
 const dataDir = path.resolve('src/data/posts');
 const imageDir = path.resolve('public/images/migrated');
@@ -21,7 +22,8 @@ for (const file of await readdir(dataDir)) if (file.endsWith('.json')) await wri
 const imageManifest = {};
 const generated = [];
 for (const { entry, reasons } of selected) {
-  let html = rewriteInternalLinks(entry.body);
+  let html = convertBlogCards(entry.body, { titleLookup });
+  html = rewriteInternalLinks(html);
   const urls = [...new Set(imageUrls(html))];
   if (values['download-images']) html = await localizeImages(html, urls, imageManifest);
   html = safeHtml(html);
