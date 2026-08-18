@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { migratedPosts } from '../../lib/posts';
+import { withBase } from '../../lib/paths';
 ---
-<BaseLayout title="記事一覧"><h1>記事一覧</h1><ul class="post-list">{migratedPosts.map(post => <li><a href={post.oldPath}>{post.title}</a><br/><time datetime={post.publishedAt}>{new Date(post.publishedAt).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})}</time></li>)}</ul></BaseLayout>
+<BaseLayout title="記事一覧"><h1>記事一覧</h1><ul class="post-list">{migratedPosts.map(post => <li><a href={withBase(post.oldPath)}>{post.title}</a><br/><time datetime={post.publishedAt}>{new Date(post.publishedAt).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})}</time></li>)}</ul></BaseLayout>
