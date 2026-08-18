@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { migratedPosts } from '../lib/posts';
-import { baseUrl } from '../lib/basePath';
-const base = baseUrl();
+import { withBase } from '../lib/paths';
 ---
 <BaseLayout>
   <h1>sironekotoro blog</h1>
   <p>技術メモと日々の記録。はてなブログからの移行を準備中です。</p>
   <h2>最近の記事</h2>
-  <ul class="post-list">{migratedPosts.slice(0, 8).map(post => <li><a href={base + post.oldPath.slice(1)}>{post.title}</a><br/><time datetime={post.publishedAt}>{new Date(post.publishedAt).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})}</time></li>)}</ul>
+  <ul class="post-list">{migratedPosts.slice(0, 8).map(post => <li><a href={withBase(post.oldPath)}>{post.title}</a><br/><time datetime={post.publishedAt}>{new Date(post.publishedAt).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})}</time></li>)}</ul>
 </BaseLayout>

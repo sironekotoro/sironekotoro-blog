@@ -37,6 +37,9 @@ jobs:
         run: npm run check
 
       - name: Build Astro site
+        env:
+          SITE_URL: https://sironekotoro.github.io
+          BASE_PATH: /sironekotoro-blog
         run: npm run build
 
       - name: Upload artifact
@@ -46,7 +49,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: github-pages
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
